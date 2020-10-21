@@ -24,10 +24,6 @@
 				font-family: monospace;
 			}
 
-			li {
-				color: white;
-			}
-
 			h1 {
 				font-family: "Lobster", monospace;
 			}
@@ -49,6 +45,10 @@
 			.purple-background {
 				background-color: purple;
 			}
+
+			#cat-photo-form {
+				background-color: purple;
+			}
 		</style>
 	</head>
 
@@ -65,14 +65,14 @@
 
 			<div class="purple-background">
 				<h3 class="cyan-text">3 things cats love</h3>
-				<ul>
+				<ul class="white-text">
 					<li>Warm places</li>
 					<li>Sardine</li>
 					<li>Playing</li>
 				</ul>
 
 				<h3 class="cyan-text">3 things cats hate the most:</h3>
-				<ol>
+				<ol class="white-text">
 					<li>Water</li>
 					<li>Loud noises</li>
 					<li>Surprises</li>
@@ -80,7 +80,7 @@
 			</div>
 
 			<div>
-				<form action="https://freecatphotoapp.com/submit-cat-photo">
+				<form class="white-text" id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
 					<label for="indoor">
 						<input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor
 					</label>
