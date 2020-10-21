@@ -4,15 +4,50 @@
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 		<title>Cat Photo App</title>
 		<style>
+			.cyan-text {
+				color: cyan;
+			}
 			.blue-text {
 				color: blue;
 			}
+
+			.black-text {
+				color: black;
+			}
+
+			.white-text {
+				color: white;
+			}
+
 			p {
 				font-size: 16px;
 				font-family: monospace;
 			}
+
+			li {
+				color: white;
+			}
+
 			h1 {
 				font-family: "Lobster", monospace;
+			}
+
+			.small-image {
+				width: 100px;
+			}
+
+			.thin-purple-border {
+				border-style: solid;
+				border-width: 4.24px;
+				border-color: purple;
+			}
+
+			.round-image {
+				border-radius: 50%;
+			}
+
+			.purple-background {
+				background-color: purple;
 			}
 		</style>
 	</head>
@@ -21,22 +56,22 @@
 		<h1 class="blue-text">Cat Photo App</h1>
 		<main>
 			<p>View more <a href="#" target="_blank">cat photos</a></p>
-			<a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
+			<a href="#"><img class="small-image thin-purple-border round-image" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
 
-			<div>
-				<p class="blue-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-				<p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+			<div class="purple-background">
+				<p class="white-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+				<p class="white-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 			</div>
 
-			<div>
-				<h3>3 things cats love</h3>
+			<div class="purple-background">
+				<h3 class="cyan-text">3 things cats love</h3>
 				<ul>
 					<li>Warm places</li>
 					<li>Sardine</li>
 					<li>Playing</li>
 				</ul>
 
-				<h3>3 things cats hate the most:</h3>
+				<h3 class="cyan-text">3 things cats hate the most:</h3>
 				<ol>
 					<li>Water</li>
 					<li>Loud noises</li>
@@ -65,7 +100,7 @@
 					<button type="submit">Submit</button>
 				</form>
 			</div>
-			
+
 			<footer id="footer">Copyright Cat Photo App</footer>
 		</main>
 	</body>
