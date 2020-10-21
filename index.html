@@ -1,27 +1,51 @@
-<h1>Cat Photo App</h1>
-<main>
-	<p>View more <a href="#" target="_blank">cat photos</a></p>
-	<a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
-	<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-	<p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cat Photo App</title>
+	</head>
 
-	<h3>3 things cats love</h3>
-	<ul>
-		<li>Warm places</li>
-		<li>Sardine</li>
-		<li>Playing</li>
-	</ul>
+	<body>
+		<h1>Cat Photo App</h1>
+		<main>
+			<p>View more <a href="#" target="_blank">cat photos</a></p>
+			<a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
+			<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+			<p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 
-	<h3>3 things cats hate the most:</h3>
-	<ol>
-		<li>Water</li>
-		<li>Loud noises</li>
-		<li>Surprises</li>
-	</ol>
+			<h3>3 things cats love</h3>
+			<ul>
+				<li>Warm places</li>
+				<li>Sardine</li>
+				<li>Playing</li>
+			</ul>
 
-	<form action="https://freecatphotoapp.com/submit-cat-photo">
-		<input type="text" placeholder="cat photo URL" required>
-		<button type="submit">Submit</button>
-	</form>
-</main>
-<footer id="footer">Copyright Cat Photo App</footer>
+			<h3>3 things cats hate the most:</h3>
+			<ol>
+				<li>Water</li>
+				<li>Loud noises</li>
+				<li>Surprises</li>
+			</ol>
+
+			<form action="https://freecatphotoapp.com/submit-cat-photo">
+				<label for="indoor">
+					<input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor
+				</label>
+				<label for="outdoor">
+					<input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor
+				</label><br>
+				<label for="playful">
+					<input type="checkbox" id="playful" name="personality" value="playful"> Playful
+				</label>
+				<label for="loving">
+					<input type="checkbox" id="loving" name="personality" value="loving"> Loving
+				</label>
+				<label for="gentle">
+					<input type="checkbox" id="gentle" name="personality" value="gentle"> Gentle
+				</label><br>
+				<input type="text" placeholder="cat photo URL" required>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+		<footer id="footer">Copyright Cat Photo App</footer>
+	</body>
+</html>
