@@ -13,6 +13,7 @@ is the same as
 	padding: 3em 3em 3em 3em;
 }
 ```
+
 This sets the padding property of the top, right, bottom and left sides of any HTML element with the attribute `<class="big-padding">` to 3em.
 --------------
 
