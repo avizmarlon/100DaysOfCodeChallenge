@@ -42,3 +42,12 @@ Attribute Selector Example:
 }
 
 This selects all HTML elements that have the attribute "type" with this attribute's value set to "checkbox" and changes the top and bottom margin to 10px.
+----------------------
+
+font-family Degrade
+
+.lobster-font {
+	font-family: "lobster", monospace;
+}
+
+If the "lobster" font-family is not available, it will degrade to the next available font -- in this case the generic font "monospace". Note that generic fonts SHOULD NOT have quotes, or they won't work.

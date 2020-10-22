@@ -1,3 +1,12 @@
+<!-- 
+To-do:
+- Make more use of custom css variables to reinforce the knowledge about it.
+- Try to customize the website with what I learned about padding, margin, colors, font-size, background color.
+- Practice selecting elements in different ways (using different selectors: class, ID, 
+attribute, element name, pseudo-class etc.)
+
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,6 +16,7 @@
 			.cyan-text {
 				color: cyan;
 			}
+
 			.blue-text {
 				color: blue;
 			}
@@ -15,13 +25,24 @@
 				color: black;
 			}
 
+			/* Just trying out stuff related to custom css variables/properties to
+			learn how it actually works.*/
+			:root {
+				--main-text: white;
+			}
+
+			main {
+				--main-text2: var(--main-text)				
+			}
+
 			.white-text {
-				color: white;
+				color: var(--main-text2);
 			}
 
 			p {
 				font-size: 16px;
 				font-family: monospace;
+				padding-top: 0em;
 			}
 
 			h1 {
@@ -49,6 +70,7 @@
 			#cat-photo-form {
 				background-color: purple;
 			}
+
 		</style>
 	</head>
 
