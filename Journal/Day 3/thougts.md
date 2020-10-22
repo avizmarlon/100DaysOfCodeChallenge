@@ -1,4 +1,4 @@
-Giving only one value to a css property like padding or margin, will set that value to all 4 sides of the HTML element. E.g.:
+Giving only one value to a css property like padding or margin (properties that can change each side of a HTML element individually), will set that value to all 4 sides of the HTML element. E.g.:
 
 ```css
 .big-padding {
@@ -13,7 +13,7 @@ is the same as
 	padding: 3em 3em 3em 3em;
 }
 ```
-This sets the padding property of the top, right, bottom and left sides of any HTML element with the attribute <class="big-padding"> to 3em.
+This sets the padding property of the top, right, bottom and left sides of any HTML element with the attribute `<class="big-padding">` to 3em.
 --------------
 
 # Custom CSS Properties (or Custom CSS Variables)
