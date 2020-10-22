@@ -1,4 +1,4 @@
-Most tags can easily be remembered by their "full name", e.g.:
+Most tags can be easily remembered by their "full name", e.g.:
 `<ul>` = unordered list, the tag is made by the initials of the full name, same as `<ol>` = ordered list or `<li>` = list item
 `<p>` = paragraph
 `<h1...h6>` = header1...header6
@@ -9,7 +9,7 @@ This makes it pretty easy to remember them. The tags are usually self-descriptiv
 
 Remembering the best practice of setting a for attribute in a label element nesting an input element with an id attribute to aid assistive tech in creating relationships between those elements.
 
-This `<label>` is "for" the nested `<input>` "id"entified by id="id".
+The following `<label>` is "for" the nested `<input>` "id"entified by `id="id"`.
 ```html
 <label for="awesome-input>
     <input id="awesome-input">
@@ -31,13 +31,13 @@ Example:
 </form>
 ```
 
-This creates a form with two radio buttons (only 1 option can be selected by the user) grouped by the name "blue-red". Each with a text next to them (first option with "Blue" and second option with "Red"). The `<label>` allows the user, for instance, to click the text "Blue" to select the radio button, instead of having to click the radio button itself.
+This creates a form with two radio buttons (only 1 option can be selected by the user) grouped by the name `blue-red`. Each with a text next to them (first option with "Blue" and second option with "Red"). The `<label>` allows the user, for instance, to click the text "Blue" to select the radio button, instead of having to click the radio button itself.
 
 --------------
 
-Input elements of the type "radio" and "checkboxes" submit (when user press the "submit" button, for example) their data from their "value" attribute, not the "name" or "id" attributes, and not the text value of the input element.
+Input elements of the type `radio` and `checkbox` submits (when user press the submit button, for example) their data from their `value` attribute, not the `name` or `id` attributes, and not the text value of the input element.
 
-The resulting form data is written in the format: name_attribute=value_attribute
+The resulting form data is written in the format: `name_attribute=value_attribute`
 
 Example:
 
@@ -50,11 +50,11 @@ Example:
 </label>
 ```
 
-If the user selects the first option (Number 1), the submitted form data would be numbers=number1
+If the user selects the first option (Number 1), the submitted form data would be `numbers=number1`
 
-"numbers" is the value of the "name" attribute by which both buttons are associated by.
-"number1" is the value of the "Value" attribute of the chosen option (Number 1).
+`numbers` is the value of the `name` attribute by which both buttons are associated by.
+`number1` is the value of the `value` attribute of the chosen option (Number 1).
 
-If the chosen option doesn't have a "Value" attribute or it's empty, it will default to "on", which isn't meaningful; its as bad as naming a variable "Variable", and is bound to cause confusion in the future.
+If the chosen option doesn't have a `value` attribute or it's empty, it will default to `on`, which isn't meaningful; its as bad as naming a variable `variable = "this is a variable. lol`, and is bound to cause confusion in the future.
 
 --------------

@@ -11,7 +11,7 @@ Sets a CSS property for all sides of an element in a single line. E.g.:
 }
 ```
 
-This selects any HTML element with the class "big-margin" and set its top and bottom margin to 10px, and the left and right margin to 5px.
+This selects any HTML element with the class `big-margin` and set its top and bottom margin to 10px, and the left and right margin to 5px.
 --------
 
 CSS Selectors
@@ -50,7 +50,7 @@ Attribute Selector Example:
 }
 ```
 
-This selects all HTML elements that have the attribute "type" with this attribute's value set to "checkbox" and changes the top and bottom margin to 10px.
+This selects all HTML elements that have the attribute `type` with this attribute's value set to `checkbox` (e.g.: `<input type="checkbox`>) and changes the top and bottom margin to 10px.
 ----------------------
 
 font-family Degrade
@@ -61,4 +61,4 @@ font-family Degrade
 }
 ```
 
-If the "lobster" font-family is not available, it will degrade to the next available font -- in this case the generic font "monospace". Note that generic fonts SHOULD NOT have quotes, or they won't work.
+If the `lobster` font-family is not available, it will degrade to the next available font -- in this case the generic font `monospace`. Note that generic fonts SHOULD NOT have quotes (`"monospace"`), or they won't work.
