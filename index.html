@@ -29,6 +29,11 @@ attribute, element name, pseudo-class etc.)
 			learn how it actually works.*/
 			:root {
 				--main-text: white;
+				--red-color: red;
+			}
+
+			.red-text {
+				color: var(--red-color, red);
 			}
 
 			main {
@@ -80,7 +85,7 @@ attribute, element name, pseudo-class etc.)
 			<p>View more <a href="#" target="_blank">cat photos</a></p>
 			<a href="#"><img class="small-image thin-purple-border round-image" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
 
-			<div class="purple-background">
+			<div class="red-text purple-background">
 				<p class="white-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
 				<p class="white-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 			</div>
