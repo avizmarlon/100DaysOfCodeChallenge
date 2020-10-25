@@ -1,0 +1,23 @@
+:root {
+	--main-color: #00362D;
+	--secondary-color: #00DBB7;
+	--normal-text-color: #FCFCFC;
+	--big-text-color: white;
+	--standard-img-roundness: 50%;
+	--header-font: ;
+	--normal-text-font: ;
+}
+
+body {
+	background-color: var(--main-color);
+}
+
+.big-text-color {
+	color: var(--big-text-color);
+}
+
+.title-text {
+	font-size: 5em;
+	margin-top: 5px;
+	text-align: center;
+}
