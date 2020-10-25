@@ -6,12 +6,16 @@
 	--standard-img-roundness: 50%;
 	--header-font: ;
 	--normal-text-font: ;
+	--test-border: 5px solid black;
 }
 
 body {
 	background-color: var(--main-color);
 }
 
+.test-border {
+	border: var(--test-border)
+}
 .big-text-color {
 	color: var(--big-text-color);
 }
@@ -19,5 +23,28 @@ body {
 .title-text {
 	font-size: 5em;
 	margin-top: 5px;
+}
+
+.center-container {
 	text-align: center;
+	margin: 0 auto;
+}
+
+.logo-img {
+	width: 20%;
+	border-radius: 50%;
+}
+
+
+p {
+	color: var(--normal-text-color);
+}
+
+.inline-display {
+	color: var(--normal-text-color);
+	display: inline;
+}
+
+.inlineBlock-display {
+	display: inline-block;
 }
