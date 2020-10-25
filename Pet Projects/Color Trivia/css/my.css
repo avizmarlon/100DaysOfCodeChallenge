@@ -16,12 +16,17 @@ body {
 .test-border {
 	border: var(--test-border)
 }
+
+.logo-area {
+	/*placeholder*/
+}
+
 .big-text-color {
 	color: var(--big-text-color);
 }
 
 .title-text {
-	font-size: 5em;
+	font-size: 3em;
 	margin-top: 5px;
 }
 
@@ -30,11 +35,14 @@ body {
 	margin: 0 auto;
 }
 
-.logo-img {
-	width: 20%;
-	border-radius: 50%;
+.center-text {
+	text-align: center;
 }
 
+.logo-img {
+	width: 7.50%;
+	border-radius: 50%;
+}
 
 p {
 	color: var(--normal-text-color);
@@ -47,4 +55,44 @@ p {
 
 .inlineBlock-display {
 	display: inline-block;
+}
+
+.big-4-container {
+	margin: 50px 0 0 150px;
+	width: 20%;
+	height: 400px;
+	border: 5px solid black;
+	padding: 0px 20px 0 20px;
+}
+
+.red-box {
+	background-color: red;
+	border: 5px solid red;
+	width: 45%;
+	height: 30%;
+	border-top-left-radius: 100%;
+}
+
+.blue-box {
+	background-color: blue;
+	border: 5px solid blue;
+	width: 45%;
+	height: 30%;
+	border-top-right-radius: 100%
+}
+
+.yellow-box {
+	background-color: yellow;
+	border: 5px solid yellow;
+	width: 45%;
+	height: 30%;
+	border-bottom-left-radius: 100%;
+}
+
+.green-box {
+	background-color: green;
+	border: 5px solid green;
+	width: 45%;
+	height: 30%;
+	border-bottom-right-radius: 100%;
 }
