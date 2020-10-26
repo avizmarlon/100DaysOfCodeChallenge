@@ -30,6 +30,10 @@ body {
 	margin-top: 5px;
 }
 
+.remove-text-decoration {
+	text-decoration: none;
+}
+
 .center-container {
 	text-align: center;
 	margin: 0 auto;
@@ -58,9 +62,9 @@ p {
 }
 
 .big-4-container {
-	margin: 50px 0 0 150px;
+	margin: 50px 0 0 50px;
 	width: 20%;
-	height: 400px;
+	height: 490px;
 	border: 5px solid black;
 	padding: 0px 20px 0 20px;
 }
@@ -95,4 +99,33 @@ p {
 	width: 45%;
 	height: 30%;
 	border-bottom-right-radius: 100%;
+}
+
+.container-border {
+	border: 5px solid black;
+}
+
+.html-code-container {
+	width: 25%;
+	margin-left: 25px;
+	padding: 10px;
+}
+
+.html-code-img {
+	width: 100%;
+	height: 160px;
+	border: 2px solid black;
+}
+
+.css-code-container {
+	width: 50%;
+	margin-left: 25px;
+	padding: 10px;
+	margin-right: -1500px;
+}
+
+.css-code-img {
+	width: 100%;
+	height: 780px;
+	border: 2px solid black;
 }
