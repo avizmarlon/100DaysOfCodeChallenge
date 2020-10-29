@@ -11,6 +11,7 @@ attribute, element name, pseudo-class etc.)
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="my.css" rel="stylesheet" type="text/css">
 		<title>Cat Photo App</title>
 		<style>
 			.cyan-text {
@@ -44,15 +45,15 @@ attribute, element name, pseudo-class etc.)
 				color: var(--main-text2);
 			}
 
-			p {
+			/*p {
 				font-size: 16px;
 				font-family: monospace;
 				padding-top: 0em;
-			}
+			}*/
 
-			h1 {
+			/*h1 {
 				font-family: "Lobster", monospace;
-			}
+			}*/
 
 			.small-image {
 				width: 100px;
@@ -79,17 +80,18 @@ attribute, element name, pseudo-class etc.)
 		</style>
 	</head>
 
-	<body>
-		<h1 class="blue-text">Cat Photo App</h1>
+	<body style="height: 200vh">
+		<h1 class="blue-text small-text fixed-pos">Cat Photo App</h1>
 		<main>
 			<p>View more <a href="#" target="_blank">cat photos</a></p>
 			<a href="#"><img class="small-image thin-purple-border round-image" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
 
-			<div class="red-text purple-background">
+			<div class="red-text purple-background sticky-pos">
 				<p class="white-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
 				<p class="white-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
 			</div>
 
+			<!--
 			<div class="purple-background">
 				<h3 class="cyan-text">3 things cats love</h3>
 				<ul class="white-text"
@@ -105,7 +107,7 @@ attribute, element name, pseudo-class etc.)
 					<li>Surprises</li>
 				</ol>
 			</div>
-
+			-->
 			<div>
 				<form class="white-text" id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
 					<label for="indoor">
@@ -127,6 +129,14 @@ attribute, element name, pseudo-class etc.)
 					<button type="submit">Submit</button>
 				</form>
 			</div>
+
+			<section class="relative-pos">
+				<h5 class="position-test1">I'm a &lt;h5&gt; tag;</h5>
+				<p class="position-test2">I'm a &lt;p&gt; tag;</p>
+			</section>
+
+
+
 
 			<footer id="footer">Copyright Cat Photo App</footer>
 		</main>

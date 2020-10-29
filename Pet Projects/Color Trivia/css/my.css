@@ -14,6 +14,16 @@ body {
 	background: url("../img/cool-background.png") 0px 0px / cover no-repeat;
 }
 
+.position-test1 {
+	position: absolute;
+	right: 0px;
+}
+
+.position-test2 {
+	positiona: ;
+
+}
+
 .test-border {
 	border: var(--test-border)
 }

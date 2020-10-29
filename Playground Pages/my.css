@@ -1,0 +1,30 @@
+.position-test1 {
+	position: relative;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.position-test2 {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.relative-pos {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+
+.sticky-pos {
+	position: sticky;
+}
+
+.fixed-pos {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
