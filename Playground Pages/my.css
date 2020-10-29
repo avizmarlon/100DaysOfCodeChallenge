@@ -15,12 +15,14 @@
 
 .relative-pos {
 	position: relative;
+	top: 0;
 	margin: 0px;
 	padding: 0px;
 }
 
 .sticky-pos {
 	position: sticky;
+	top: 10px;
 }
 
 .fixed-pos {
