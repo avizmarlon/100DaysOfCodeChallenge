@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		:root {
+			--num_cols: 3.10;
+		}
+		.basic-padding {
+			padding: 10px;
+		}
+
+		.small-padding {
+			padding: 2px;
+		}
+
+		.yellow-box {
+			background-color: yellow;
+			width: 50%;
+			float: left;
+		}
+		.red-box {
+			background-color: red;
+			color: white;
+			width: calc(100% / var(--num_cols));
+			float: left;
+		}
+
+		.blue-box {
+			background-color: blue;
+			color: white;
+			width: calc(100% / var(--num_cols));
+			float: left;
+			clear: right;
+		}
+
+		.green-box {
+			background-color: green;
+			width: calc(100% / var(--num_cols));
+			float: left;
+			clear: left;
+		}
+
+		.purple-box {
+			background-color: purple;
+			width: 50%;
+		}
+
+		.basic-border {
+			border: 3px solid black;
+		}
+
+		.block-display {
+			display: block;
+		}
+
+		.float-element-left {
+			float: left;
+		}
+
+		.clear-left {
+			clear: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="yellow-box basic-padding">
+		<p>Yellow Box</p>
+		<div class="red-box small-padding"><p>Red Box</p></div>
+		<div class="blue-box small-padding"><p>Blue Box</p></div>
+		<img class="basic-border clear-left block-display" src="https://i.pinimg.com/originals/7a/f3/03/7af3035dd777c2fa81b1bc862f5c5a90.png">
+		<div class="green-box small-padding"><p>Green Box</p></div>
+	</div>
+	<div class="purple-box basic-padding">Purple Box</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut libero enim. Mauris non feugiat nunc. Vivamus consequat volutpat fringilla. Ut a dolor interdum, finibus sem ac, malesuada nisl. Quisque id mattis erat. Nulla facilisi. Proin posuere leo quis ipsum posuere ullamcorper. Fusce vitae sapien pulvinar, auctor purus in, elementum nibh. Curabitur tincidunt molestie sapien eu interdum. Nunc aliquet condimentum luctus.</p>
+	<em>oi</em>
+	<span>teste</span>
+</body>
+</html>

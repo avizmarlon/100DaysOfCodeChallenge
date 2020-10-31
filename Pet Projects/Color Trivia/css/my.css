@@ -93,12 +93,12 @@ p {
 
 .red-box {
 	background-color: rgba(240, 0, 0, 1);
-	border: 5px solid rgba(240, 0, 0, 1);
+	border: 5px solid rgba(240, 0, 0, 0.5);
 	width: 45%;
 	height: 30%;
 	border-top-right-radius: 100%;
 	border-bottom-left-radius: 100%;
-	box-shadow: -10px -10px 50px 30px rgba(255, 0, 0, 1);
+	box-shadow: -10px -10px 20px 10px rgba(255, 0, 0, 1);
 }
 
 .blue-box {
@@ -108,9 +108,8 @@ p {
 	height: 30%;
 	border-top-left-radius: 100%;
 	border-bottom-right-radius: 100%;
-	box-shadow: 10px -10px 50px 30px rgba(0, 0, 255, 1);
+	box-shadow: 10px -10px 20px 10px rgba(0, 0, 255, 1);
 }
-
 .yellow-box {
 	background-color: rgba(240, 240, 0, 1);
 	border: 5px solid rgba(240, 240, 0, 1);
@@ -118,17 +117,17 @@ p {
 	height: 30%;
 	border-bottom-right-radius: 100%;
 	border-top-left-radius: 100%;
-	box-shadow: -10px 10px 50px 40px rgba(255, 255, 0, 1);
+	box-shadow: -10px 10px 20px 10px rgba(255, 255, 0, 1);
 }
 
 .green-box {
 	background-color: rgba(0, 240, 0, 1);
-	border: 5px solid rgba(0, 240, 0, 1);
+	border: 5px solid rgba(0, 240, 0, 0.5);
 	width: 45%;
 	height: 30%;
 	border-bottom-left-radius: 100%;
 	border-top-right-radius: 100%;
-	box-shadow: 10px 10px 50px 30px rgba(0, 255, 0, 1);
+	box-shadow: 10px 10px 20px 10px rgba(0, 255, 0, 1);
 }
 
 .container-border {
