@@ -1,0 +1,50 @@
+:root {
+	--primary-color: #292929;
+	--secondary-color: ;
+	--tertiary-color: ;
+}
+
+body {
+	background-color: var(--primary-color);
+}
+
+.test-border1 {
+	border: 3px solid red;
+}
+
+.test-border2 {
+	border: 3px solid yellow;
+}
+
+.test-border3 {
+	border: 3px solid green;
+}
+
+.buttons-grid {
+	padding: 5px;
+	text-align: center;
+	min-width: 920px;
+	max-width: 920px;
+	margin: 0 auto;
+}
+
+.buttons-row {
+	margin: 2px;
+	font-size: 0;
+}
+
+.soundboard-button {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 0px;
+	display: inline-block;
+}
+
+.clear-float {
+	clear: left;
+}
+
+.float {
+	float: left;
+}
