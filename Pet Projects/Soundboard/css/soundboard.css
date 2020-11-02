@@ -26,6 +26,7 @@ body {
 	min-width: 920px;
 	max-width: 920px;
 	margin: 0 auto;
+	vertical-align: middle;
 }
 
 .buttons-row {
@@ -34,17 +35,11 @@ body {
 }
 
 .soundboard-button {
+	font-size: initial;
 	vertical-align: middle;
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
 	margin: 0px;
-}
-
-.clear-float {
-	clear: left;
-}
-
-.float {
-	float: left;
+	background-color: cyan;
 }
