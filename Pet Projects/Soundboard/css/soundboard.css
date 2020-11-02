@@ -21,8 +21,8 @@ body {
 }
 
 .buttons-grid {
-	padding: 5px;
 	text-align: center;
+	padding: 5px;
 	min-width: 920px;
 	max-width: 920px;
 	margin: 0 auto;
@@ -34,11 +34,11 @@ body {
 }
 
 .soundboard-button {
+	vertical-align: middle;
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
 	margin: 0px;
-	display: inline-block;
 }
 
 .clear-float {
