@@ -1,11 +1,13 @@
 :root {
 	--primary-color: #292929;
-	--secondary-color: ;
-	--tertiary-color: ;
+	--secondary-color: #23146E;
+	--tertiary-color: #5E8234;
 }
 
 body {
 	background-color: var(--primary-color);
+	padding: 0;
+	margin: 0;
 }
 
 .test-border1 {
@@ -42,4 +44,42 @@ body {
 	border-radius: 50%;
 	margin: 0px;
 	background-color: cyan;
+}
+
+.navbar-container {
+	height: 95px;
+	background-color: var(--secondary-color);
+	margin-bottom: 20px;
+	position: sticky;
+	top: 0;
+	left: 0;
+	border: 5px solid black;
+}
+
+.navbar-row {
+	font-size: 0;
+	text-align: center;
+	position: relative;
+}
+
+.navbar-item {
+	position: relative;
+	font-size: initial;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: middle;
+	border: 5px solid purple;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+	background-color: var(--tertiary-color);
+	color: black;
+}
+
+.navbar-item-text {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
 }
