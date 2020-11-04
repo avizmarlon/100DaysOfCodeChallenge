@@ -23,6 +23,7 @@ body {
 }
 
 .buttons-grid {
+	position: relative;
 	text-align: center;
 	padding: 5px;
 	min-width: 920px;
@@ -47,6 +48,7 @@ body {
 }
 
 .navbar-container {
+	z-index: 10;
 	height: 95px;
 	background-color: var(--secondary-color);
 	margin-bottom: 20px;
@@ -67,7 +69,7 @@ body {
 	font-size: initial;
 	display: inline-block;
 	vertical-align: middle;
-	text-align: middle;
+	text-align: center;
 	border: 5px solid purple;
 	padding: 3px;
 	margin: 3px;
