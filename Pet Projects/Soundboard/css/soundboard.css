@@ -58,7 +58,7 @@ body {
 	width: 75px;
 	height: 75px;
 	display: inline-block;
-	font-size: initial;aborder: 5px solid purple;
+	font-size: initial;
 	border-radius: 50%;
 	background-color: var(--tertiary-color);
 	color: black;
