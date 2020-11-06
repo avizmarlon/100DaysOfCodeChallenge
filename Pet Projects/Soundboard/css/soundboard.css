@@ -10,24 +10,11 @@ body {
 	margin: 0;
 }
 
-.test-border1 {
-	border: 3px solid red;
-}
-
-.test-border2 {
-	border: 3px solid yellow;
-}
-
-.test-border3 {
-	border: 3px solid green;
-}
-
 .buttons-grid {
 	position: relative;
 	text-align: center;
 	padding: 5px;
 	min-width: 920px;
-	max-width: 920px;
 	margin: 0 auto;
 	vertical-align: middle;
 }
@@ -43,7 +30,7 @@ body {
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
-	margin: 0px;
+	margin: 2px;
 	background-color: cyan;
 }
 
@@ -56,32 +43,36 @@ body {
 	top: 0;
 	left: 0;
 	border: 5px solid black;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 0;
 }
 
 .navbar-row {
-	font-size: 0;
-	text-align: center;
 	position: relative;
 }
 
 .navbar-item {
+	margin: 10px 2px;
 	position: relative;
-	font-size: initial;
+	width: 75px;
+	height: 75px;
 	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	border: 5px solid purple;
-	padding: 3px;
-	margin: 3px;
+	font-size: initial;aborder: 5px solid purple;
 	border-radius: 50%;
-	height: 70px;
-	width: 70px;
 	background-color: var(--tertiary-color);
 	color: black;
+	transform: translate(0%, 0%);
 }
 
 .navbar-item-text {
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+.prewrap {
+	white-space: pre-wrap; /*Fixes bad wraping in the "Request a button" element.*/
 }
