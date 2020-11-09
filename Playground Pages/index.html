@@ -1,151 +1,132 @@
-<!-- 
-To-do:
-- Make more use of custom css variables to reinforce the knowledge about it.
-- Try to customize the website with what I learned about padding, margin, colors, font-size, background color.
-- Practice selecting elements in different ways (using different selectors: class, ID, 
-attribute, element name, pseudo-class etc.)
-
--->
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-		<link href="my.css" rel="stylesheet" type="text/css">
-		<title>Cat Photo App</title>
 		<style>
-			.cyan-text {
-				color: cyan;
-			}
-
-			.black-text {
-				color: black;
-			}
-
-			/* Just trying out stuff related to custom css variables/properties to
-			learn how it actually works.*/
 			:root {
-				--main-text: white;
-				--red-color: red;
+				--white: #FFF;
+				--dark-purple: #710EBC;
+				--purple: #A938FF;
 			}
 
-			.red-text {
-				color: var(--red-color, red);
+			body {
+				background: repeating-linear-gradient(-45deg,  #FEDF32,  #FEDF32 1px,  #FFE935 1px,  #FFE935 4px);
 			}
 
-			main {
-				--main-text2: var(--main-text)				
-			}
-
-
-			.white-text {
-				color: var(--main-text2);
-			}
-
-			/*p {
-				font-size: 16px;
-				font-family: monospace;
-				padding-top: 0em;
-			}*/
-
-			/*h1 {
-				font-family: "Lobster", monospace;
-			}*/
-
-			.blue-text {
-				color: blue;
-			}
-			.small-image {
-				width: 100px;
-				position: relative;
-				top: -50px;
-			}
-
-			.thin-purple-border {
-				border-style: solid;
-				border-width: 4.24px;
-				border-color: purple;
-			}
-
-			.round-image {
+			div[class*="-border1"], div[class*="-circle"], div.circle-container3 {
 				border-radius: 50%;
 			}
 
-			.purple-background {
-				background-color: purple;
+			div[class*="purple-circle"] {
+				background: var(--purple);				
 			}
 
-			#cat-photo-form {
-				background-color: purple;
+			div[class*="circle-container"] {
+				display: inline-block;
+				margin-left: 30px;
 			}
 
-			.test-pos {
-				position: relative;
-				atop: -50px;
+			.content-splitter {
+				margin: 70px 0px;
+			}
+
+			.white-right-arrow-shape {
+				background: url("right-arrow-white.PNG") center / contain no-repeat; 
+				padding: 25px;
+			}
+
+			.white-border1 {
+				background-color: var(--white);
+				padding: 13.5px;
+			}
+
+			.dark-purple-border1{
+				background-color: var(--dark-purple);
+				padding: 10px;
+			}
+
+			.purple-circle1 {
+				display: inline-block;
+				padding: 30px;
+			}
+
+			/* ------------------- Second circle ----------------- */
+			.purple-circle2 {
+				display: inline-block;
+				padding: 30px;
+				box-shadow: 0 0 0 10px var(--dark-purple),
+							0 0 0 23.5px var(--white);
+			}
+
+			/* ------------------- Third circle ----------------- */
+			.purple-circle3 {
+				display: inline-block;
+				padding: 30px;
+			}
+
+			.circle-container3 {
+				background: transparent;
+				padding: 10px;
+				border: 13.5px solid var(--white);
+			}
+
+			<!-- ------------------- Buy now button ----------------- -->
+			.yellow-gradient-background {
+				display: block;				
+			}
+
+			.buy-now {
+				display: inline-block;
+				border: 3px solid #FD4642;
+				border-radius: 16px;
+				background: transparent;
+				padding: 3px;
+				text-decoration: none;
+			}
+
+			.buy-now span {
+				display: inline-block;
+				border-radius: 12px;
+				background: #EC312E;
+				padding: 8px 16px;
+				color: var(--white);
+				text-align: center;
+				line-height: 1.5;
+				font-size: 30px;
+				font-family: "Futura";
 			}
 
 		</style>
 	</head>
-
-	<body style="height: 200vh; width: 200vw;">
-		<main>
-			<p>View more <a href="#" target="_blank">cat photos</a></p>
-		<h1 class="blue-text test-pos">Cat Photo App</h1>
-			<a href="#"><img class="small-image thin-purple-border round-image" src="https://bit.ly/fcc-relaxing-cat" alt="Relaxing cat"></a>
-
-			<div class="red-text purple-background sticky-pos">
-				<p class="white-text">Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-				<p class="white-text">Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+	<body>
+		<h1>Manually replicated from https://tazoselmachips.com.br/</h1>
+		<div class="circle-container1">
+			<div class="white-border1">
+				<div class="dark-purple-border1">
+					<div class="purple-circle1">
+						<div class="white-right-arrow-shape"></div>
+					</div>
+				</div>
 			</div>
+		</div>
 
-			<!--
-			<div class="purple-background">
-				<h3 class="cyan-text">3 things cats love</h3>
-				<ul class="white-text"
-	>				<li>Warm places</li>
-					<li>Sardine</li>
-					<li>Playing</li>
-				</ul>
-
-				<h3 class="cyan-text">3 things cats hate the most:</h3>
-				<ol class="white-text">
-					<li>Water</li>
-					<li>Loud noises</li>
-					<li>Surprises</li>
-				</ol>
+		<!-- ------------------- Second circle ----------------- -->
+		<div class="circle-container2">
+			<div class="purple-circle2">
+				<div class="white-right-arrow-shape"></div>
 			</div>
-			-->
-			<div>
-				<form class="white-text" id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
-					<label for="indoor">
-						<input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor
-					</label>
-					<label for="outdoor">
-						<input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor"> Outdoor
-					</label><br>
-					<label for="playful">
-						<input type="checkbox" id="playful" name="personality" value="playful"> Playful
-					</label>
-					<label for="loving">
-						<input type="checkbox" id="loving" name="personality" value="loving"> Loving
-					</label>
-					<label for="gentle">
-						<input type="checkbox" id="gentle" name="personality" value="gentle"> <span style="vertical-align: super;">Gentle</span>
-					</label><br>
-					<input type="text" placeholder="cat photo URL" required>
-					<button type="submit">Submit</button>
-				</form>
+		</div>
+
+		<!-- ------------------- Third circle ----------------- -->
+		<div class="circle-container3">
+			<div class="purple-circle3">
+				<div class="white-right-arrow-shape"></div>
 			</div>
+		</div>
 
-			<section class="relative-pos">
-				<h5 class="position-test1">I'm a &lt;h5&gt; tag;</h5>
-				<p class="position-test2">I'm a &lt;p&gt; tag;</p>
-			</section>
-
-
-
-
-			<footer id="footer">Copyright Cat Photo App</footer>
-		</main>
+		<div class="content-splitter"></div>
+		<!-- ------------------- Buy now button ----------------- -->
+		<div class="yellow-gradient-background">
+			<a href="" class="buy-now"><span>Compre agora</span></a>
+		</div>
 	</body>
 </html>
