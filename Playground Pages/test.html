@@ -13,13 +13,14 @@
 			width: 700px;
 			height: 700px;
 			/*margin: 0 auto;*/
+			margin-bottom: 40px;
 
 		}
 
 		.navbar-row {
 			border: 3.5px solid black;
 			position: relative;
-			display: inline-block;
+			margin-bottom: 20px;
 		}
 		.navbar-item {
 			display: inline-block;
@@ -40,10 +41,66 @@
 			vertical-align: middle;
 			
 		}
+
+		.super-height {
+			height: 200vw;
+		}
+
+		.sticky {
+			position: sticky;
+			top: 0;
+			left: 0;
+		}
 	</style>
 </head>
 <body>
 	<div class="navbar-container">
+		<div class="navbar-row sticky">
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Home</p>
+				</div>
+			</a>
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Categories</p>
+				</div>
+			</a>
+		</div>
+
+
+		<div class="navbar-row">
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Home</p>
+				</div>
+			</a>
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Categories</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+
+
+	<div class="navbar-container super-height">
+		<div class="navbar-row sticky">
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Home</p>
+				</div>
+			</a>
+			<a class="navbar-anchor" href="">
+				<div class="navbar-item">
+					<p class="navbar-item-text">Categories</p>
+				</div>
+			</a>
+		</div>
+
+
 		<div class="navbar-row">
 			<a class="navbar-anchor" href="">
 				<div class="navbar-item">
