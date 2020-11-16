@@ -1,104 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-			:root {
-				--white: #FFF;
-				--dark-purple: #710EBC;
-				--purple: #A938FF;
-			}
-
-			body {
-				background: repeating-linear-gradient(-45deg,  #FEDF32,  #FEDF32 1px,  #FFE935 1px,  #FFE935 4px);
-			}
-
-			div[class*="-border1"], div[class*="-circle"], div.circle-container3 {
-				border-radius: 50%;
-			}
-
-			div[class*="purple-circle"] {
-				background: var(--purple);				
-			}
-
-			div[class*="circle-container"] {
-				display: inline-block;
-				margin-left: 30px;
-			}
-
-			.content-splitter {
-				margin: 70px 0px;
-			}
-
-			.white-right-arrow-shape {
-				background: url("right-arrow-white.PNG") center / contain no-repeat; 
-				padding: 25px;
-			}
-
-			.white-border1 {
-				background-color: var(--white);
-				padding: 13.5px;
-			}
-
-			.dark-purple-border1{
-				background-color: var(--dark-purple);
-				padding: 10px;
-			}
-
-			.purple-circle1 {
-				display: inline-block;
-				padding: 30px;
-			}
-
-			/* ------------------- Second circle ----------------- */
-			.purple-circle2 {
-				display: inline-block;
-				padding: 30px;
-				box-shadow: 0 0 0 10px var(--dark-purple),
-							0 0 0 23.5px var(--white);
-			}
-
-			/* ------------------- Third circle ----------------- */
-			.purple-circle3 {
-				display: inline-block;
-				padding: 30px;
-			}
-
-			.circle-container3 {
-				background: transparent;
-				padding: 10px;
-				border: 13.5px solid var(--white);
-			}
-
-			/* ------------------- Buy now button ----------------- */			.yellow-gradient-background {
-				display: block;				
-			}
-
-			.buy-now {
-				display: inline-block;
-				border: 3px solid #FD4642;
-				border-radius: 16px;
-				background: transparent;
-				padding: 3px;
-				text-decoration: none;
-			}
-
-			.buy-now span {
-				display: inline-block;
-				border-radius: 12px;
-				background: #EC312E;
-				padding: 8px 16px;
-				color: var(--white);
-				text-align: center;
-				line-height: 1.5;
-				font-size: 30px;
-				font-family: "Futura";
-			}
-
-		</style>
+		<link rel="stylesheet" href="my.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<h1>Manually replicated from https://tazoselmachips.com.br/</h1>
-		<div class="circle-container1">
+		<div class="large-bar">
+		</div>
+		<h1 class="scale-up">Manually replicated from https://tazoselmachips.com.br/</h1>
+		<div class="circle-container1 scale-up">
 			<div class="white-border1">
 				<div class="dark-purple-border1">
 					<div class="purple-circle1">
@@ -109,23 +19,27 @@
 		</div>
 
 		<!-- ------------------- Second circle ----------------- -->
-		<div class="circle-container2">
+		<div class="circle-container2 scale-up">
 			<div class="purple-circle2">
 				<div class="white-right-arrow-shape"></div>
 			</div>
 		</div>
 
 		<!-- ------------------- Third circle ----------------- -->
-		<div class="circle-container3">
+		<div class="circle-container3 scale-up">
 			<div class="purple-circle3">
 				<div class="white-right-arrow-shape"></div>
 			</div>
 		</div>
 
 		<div class="content-splitter"></div>
+
 		<!-- ------------------- Buy now button ----------------- -->
-		<div class="yellow-gradient-background">
-			<a href="" class="buy-now"><span>Compre agora</span></a>
+		<div class="pseudo-test">
+			<a href="" class="buy-now scale-up"><span>Compre agora</span></a>
+		</div>
+		<div class="testing">
+			<h1>testeeeeeeeeeeeeeee</h1>
 		</div>
 	</body>
 </html>

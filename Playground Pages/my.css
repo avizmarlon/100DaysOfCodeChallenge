@@ -1,32 +1,129 @@
-.position-test1 {
-	position: relative;
-	top: 0px;
-	margin: 0px;
-	padding: 0px;
+:root {
+	--white: #FFF;
+	--dark-purple: #710EBC;
+	--purple: #A938FF;
 }
 
-.position-test2 {
-	position: relative;
-	top: 0px;
-	left: 0px;
-	margin: 0px;
-	padding: 0px;
+body {
+	background: repeating-linear-gradient(-45deg,  #FEDF32,  #FEDF32 1px,  #FFE935 1px,  #FFE935 4px);
 }
 
-.relative-pos {
-	position: relative;
-	top: 0;
-	margin: 0px;
-	padding: 0px;
+div[class*="-border1"], 
+div[class*="-circle"],
+div.circle-container3 {
+	border-radius: 50%;
 }
 
-.sticky-pos {
-	position: sticky;
-	top: 10px;
+div[class*="purple-circle"] {
+	background: var(--purple);				
 }
 
-.fixed-pos {
-	position: fixed;
-	top: 0px;
-	left: 0px;
+div[class*="circle-container"] {
+	display: inline-block;
+	margin-left: 45px;
+}
+
+.content-splitter {
+	margin: 70px 0px;
+}
+
+.white-right-arrow-shape {
+	background: url("right-arrow-white.PNG") center / contain no-repeat; 
+	padding: 25px;
+}
+
+.white-border1 {
+	background-color: var(--white);
+	padding: 13.5px;
+}
+
+.dark-purple-border1{
+	background-color: var(--dark-purple);
+	padding: 10px;
+}
+
+.purple-circle1 {
+	display: inline-block;
+	padding: 30px;
+}
+
+/* ------------------- Second circle ----------------- */
+.purple-circle2 {
+	display: inline-block;
+	padding: 30px;
+	box-shadow: 0 0 0 10px var(--dark-purple),
+				0 0 0 23.5px var(--white);
+}
+
+/* ------------------- Third circle ----------------- */
+.purple-circle3 {
+	display: inline-block;
+	padding: 30px;
+}
+
+.circle-container3 {
+	background: transparent;
+	padding: 10px;
+	border: 13.5px solid var(--white);
+}
+
+/* ------------------- Buy now button ----------------- */			.yellow-gradient-background {
+	display: block;				
+}
+
+.buy-now {
+	display: inline-block;
+	border: 3px solid #FD4642;
+	border-radius: 16px;
+	background: transparent;
+	padding: 3px;
+	text-decoration: none;
+	margin-left: 0px;
+}
+
+.buy-now span {
+	display: inline-block;
+	border-radius: 12px;
+	background: #EC312E;
+	padding: 8px 16px;
+	color: var(--white);
+	text-align: center;
+	line-height: 1.5;
+	font-size: 30px;
+	font-family: "Futura";
+}
+
+a.scale-up:hover,
+[class*="circle-container"]:hover {
+	animation-name: rotating3d;
+	animation-duration: 3s;
+	transform-origin: 5px 5px;
+}
+
+body {
+	perspective: 5000px;
+}
+
+@keyframes rotating3d {
+	100% {
+		transform: rotate(90deg);
+	}
+}
+
+.large-bar {
+	height: 80px;
+	background-color: red;
+}
+
+.testing h1::selection {
+	background: black;
+	color: red;
+}
+
+.testing h1::first-letter {
+	color: red;
+}
+
+.testing h1 {
+	background-color: hsl(135, 100%, 35%);
 }
