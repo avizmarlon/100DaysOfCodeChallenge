@@ -5,7 +5,13 @@
 }
 
 body {
-	background: repeating-linear-gradient(-45deg,  #FEDF32,  #FEDF32 1px,  #FFE935 1px,  #FFE935 4px);
+	background: repeating-linear-gradient(
+		-45deg,
+		#FEDF32,
+		#FEDF32 1px,
+		#FFE935 1px,
+		#FFE935 4px
+		);
 }
 
 div[class*="-border1"], 
@@ -115,7 +121,8 @@ body {
 	background-color: red;
 }
 
-.testing h1::selection {
+.testing h1::selection,
+#me::selection {
 	background: black;
 	color: red;
 }
@@ -126,4 +133,8 @@ body {
 
 .testing h1 {
 	background-color: hsl(135, 100%, 35%);
+}
+
+div h1 span#me {
+	color: blue;
 }

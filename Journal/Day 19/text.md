@@ -38,7 +38,7 @@ For example: when you use the rotate() function, you're telling the element to r
 
 ---
 
-## pseudo-classes, pseudo-elements (and its content property)
+## pseudo-classes, pseudo-elements and :: vs :
 
 ### **pseudo-classes**
 They represent different states of an element, so you can apply css rules to an element that is in a specific state. There are many pseudo-classes like:
@@ -70,6 +70,16 @@ So, basically, pseudo-classes are useful when you want to stylize an element whe
 
 *pseudo-classes are separated from the selector itself by a single colon ":" (without the quotes).*
 
-### pseudo-elements
+### **pseudo-elements**
 
+They are used to style specific parts of an element or even "create" a pseudo-element. For example, `::first-line` can be used to stylize the first line of a paragraph, while `::before` creates a pseudo-element right before the selected element.
 
+The `::before` and `::after` pseudo-elements can be used with the `content: ""` declaration to create pseudo-elements, which are useful to create shapes.
+
+Contrary to pseudo-classes, the pseudo-elements are separated from selectors by two colons "::" (without quotes) instead of one. E.g.: `div.container::before`.
+
+`::before` creates a pseudo-element that is the first child of the selected element, while `::after` creates a pseudo-element that is the last child of the selected element.
+
+### **:: vs :**
+
+Double colon and single colon exist to help distinguish pseudo-classes from pseudo-elements. It's considered good practice to keep this pseudo-class vs pseudo-elements distinction consistently throughout the code.

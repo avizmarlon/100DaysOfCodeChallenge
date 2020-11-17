@@ -1,0 +1,56 @@
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	color: red;
+	background-color: red;
+	width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    transform: rotate(135deg);
+    animation: pumping-heart 1s infinite;
+}
+
+.heart::before {
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	content: "";
+	background-color: red;
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.heart::after {
+    position: absolute;
+    top: 0px;
+    left: -25px;
+	content: "";
+	background-color: red;
+	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@keyframes pumping-heart {
+    0% {
+        transform: scale(1) rotate(135deg);
+    }
+    20% {
+        transform: scale(1.2) rotate(135deg);
+    }
+    40% {
+        transform: scale(1) rotate(135deg);
+    }
+    60% {
+        transform: scale(1.2) rotate(135deg);
+    }
+    80% {
+        transform: scale(1) rotate(135deg);
+    }
+    100% {
+        transform: scale(1) rotate(135deg);
+    }
+    
+}

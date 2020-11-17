@@ -1,0 +1,112 @@
+:root {
+    --primary-color: hsl(240, 30%, 15%);
+    --secondary-color: hsl(240, 56%, 9%);
+}
+
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0;
+}
+
+div[class*="bar"] {
+    position: relative;
+    margin: 0 4px;
+    font-size: initial;
+    display: inline-block;
+    animation-duration: 0.65s;
+    animation-timing-function: linear;
+    /* transform-origin: bottom; */
+    background-color: var(--primary-color);
+    border-radius: 20%;
+    width: 8px;
+    /* animation-iteration-count: 0; */
+}
+
+.bar1 {
+    height: 60px;
+    animation: anim-bar1 infinite;
+}
+.bar2 {
+    position: relative;
+    top: -12px;
+    height: 30px;
+    animation: anim-bar2 infinite;
+}
+.bar3 {
+    position: relative;
+    top: -18px;
+    height: 15px;
+    animation: anim-bar3 infinite;
+}
+.bar4 {
+    position: relative;
+    top: -12px;
+    height: 30px;
+    animation: anim-bar4 infinite;
+}
+.bar5 {
+    height: 60px;
+    animation: anim-bar5 infinite;
+}
+
+@keyframes anim-bar1 {
+    50% {
+        transform: scaleY(0.285);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes anim-bar2 {
+    25% {
+        transform: scaleY(0.545);
+    }    
+    50% {
+        transform: scaleY(1);
+    }
+    
+    75% {
+        transform: scaleY(1.87);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes anim-bar3 {
+    50% {
+        transform: scaleY(3.35);
+    }
+    
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes anim-bar4 {
+    25% {
+        transform: scaleY(0.545);
+    }
+    
+    50% {
+        transform: scaleY(1);
+    }
+    
+    75% {
+        transform: scaleY(1.87);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes anim-bar5 {
+    50% {
+        transform: scaleY(0.285);
+    }    
+    100% {
+        transform: scaleY(1);
+    }
+}
