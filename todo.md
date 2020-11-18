@@ -16,15 +16,14 @@
 - [ ] Learn more about tricks with the transform-origin property.
   - [ ] Make a photo falling effect with transform-origin and rotate()
 
-- [ ] Read more on pseudo-elements
+- [x] Read more on pseudo-elements
 
 - [x] Make a pumping heart animation with positioning, transform and keyframe animation properties
 
-- [ ] Recreate freeCodeCamp loading animation
+- [x] Recreate freeCodeCamp loading animation
 
 - [ ] Create different loading animations
 
 ## Things that might need reinforcement
 
 - [ ] `value` attribute on form elements (think checkboxes, radio buttons, and other types of input)
-

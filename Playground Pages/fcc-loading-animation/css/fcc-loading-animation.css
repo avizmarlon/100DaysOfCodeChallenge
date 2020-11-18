@@ -11,12 +11,80 @@
     font-size: 0;
 }
 
-div[class*="bar"] {
+/* FCC Letters */
+
+.fcc-letters-container {
+    position: relative;
+    left: 6px;
+    text-align: center;
+    display: block;
+    font-size: 80px;
+    color: var(--secondary-color);
+}
+
+.letter-F {
+    position: absolute;
+    top: -80px;
+    left: -35px;
+    animation: letter-F-anim 1s ease infinite;
+}
+.letter-C1 {
+    position: absolute;
+    top: -80px;
+    left: 15px;
+    animation: letter-C1-anim 1s ease infinite -0.3s;
+    
+}
+.letter-C2 {
+    position: absolute;
+    top: -80px;
+    left: 70px;
+    animation: letter-C2-anim 1s ease infinite -0.5s;
+
+}
+
+@keyframes letter-F-anim {
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0) rotateZ(1turn);
+    }
+}
+@keyframes letter-C1-anim {
+    50% {
+        transform: translateY(-10px);        
+    }
+    100% {
+        transform: translateY(0) rotateZ(1turn);
+    }
+}
+@keyframes letter-C2-anim {
+    50% {
+        transform: translateY(-10px);        
+    }
+    100% {
+        transform: translateY(0) rotateZ(1turn);
+    }
+}
+
+/* Bars */
+
+.bars-container {
+    display: block;
+    text-align: center;
+}
+
+div[class="bar1"],
+div[class="bar2"],
+div[class="bar3"],
+div[class="bar4"],
+div[class="bar5"] {
     position: relative;
     margin: 0 4px;
     font-size: initial;
     display: inline-block;
-    animation-duration: 0.65s;
+    animation-duration: 0.9s;
     animation-timing-function: linear;
     /* transform-origin: bottom; */
     background-color: var(--primary-color);
@@ -55,58 +123,72 @@ div[class*="bar"] {
 @keyframes anim-bar1 {
     50% {
         transform: scaleY(0.285);
+        background-color: hsl(240, 50%, 40%);
     }
 
     100% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
 }
 @keyframes anim-bar2 {
     25% {
         transform: scaleY(0.545);
+        background-color: hsl(240, 50%, 40%);
     }    
     50% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
     
     75% {
         transform: scaleY(1.87);
+        background-color: hsl(240, 50%, 40%);
     }
 
     100% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
 }
 @keyframes anim-bar3 {
     50% {
         transform: scaleY(3.35);
+        background-color: hsl(240, 50%, 40%);
     }
     
     100% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
 }
 @keyframes anim-bar4 {
     25% {
         transform: scaleY(0.545);
+        background-color: hsl(240, 50%, 40%);
     }
     
     50% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
     
     75% {
         transform: scaleY(1.87);
+        background-color: hsl(240, 50%, 40%);
     }
     100% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
 }
 @keyframes anim-bar5 {
     50% {
         transform: scaleY(0.285);
+        background-color: hsl(240, 50%, 40%);
     }    
     100% {
         transform: scaleY(1);
+        background-color: var(--primary-color);
     }
 }
