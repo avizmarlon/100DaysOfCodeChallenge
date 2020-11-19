@@ -7,10 +7,10 @@
 body {
 	background: repeating-linear-gradient(
 		-45deg,
-		#FEDF32,
-		#FEDF32 1px,
-		#FFE935 1px,
-		#FFE935 4px
+		hsl(51, 99%, 60%) 0px,
+		hsl(51, 99%, 60%) 1px,
+		hsl(53, 100%, 60%) 1px,
+		hsl(53, 100%, 60%) 4px
 		);
 }
 
@@ -73,10 +73,7 @@ div[class*="circle-container"] {
 	border: 13.5px solid var(--white);
 }
 
-/* ------------------- Buy now button ----------------- */			.yellow-gradient-background {
-	display: block;				
-}
-
+/* ------------------- Buy now button ----------------- */
 .buy-now {
 	display: inline-block;
 	border: 3px solid #FD4642;
@@ -99,11 +96,14 @@ div[class*="circle-container"] {
 	font-family: "Futura";
 }
 
-a.scale-up:hover,
+/* a.scale-up:hover,
 [class*="circle-container"]:hover {
-	animation-name: rotating3d;
-	animation-duration: 3s;
-	transform-origin: 5px 5px;
+	animation: rotating3d 3s linear infinite;
+	transform-origin: 100px 0px;
+} */
+[class*="circle-container"] {
+	animation: rotating3d 2s linear infinite;
+	transform-origin: 100px 0px;
 }
 
 body {
@@ -112,29 +112,187 @@ body {
 
 @keyframes rotating3d {
 	100% {
-		transform: rotate(90deg);
+		transform: rotate(1turn);
 	}
 }
 
-.large-bar {
-	height: 80px;
-	background-color: red;
+.gradient-main-wrap {
+	position: relative;
+	text-align: center;
+	min-width: 850px;
+	font-size: 0;
 }
 
-.testing h1::selection,
-#me::selection {
-	background: black;
-	color: red;
+.gradient-wrappers {
+	position: relative;
+	display: inline-block;
 }
 
-.testing h1::first-letter {
-	color: red;
+.gradient-wrappers div[class*="gradient"] {
+	margin: 10px 5px 10px 5px;
+	border: 1px solid black;
+	border-radius: 12px;
+	width: 400px;
+	height: 130px;
+	font-size: initial;
+	box-shadow: 
+	2px 2px 2px rgba(0, 0, 0, 0.42),
+	4px 4px 4px rgba(0, 0, 0, 0.42),
+	8px 8px 8px rgba(0, 0, 0, 0.42)
 }
 
-.testing h1 {
-	background-color: hsl(135, 100%, 35%);
+.gradient-wrappers div[class*="gradient"]:hover {
+	animation: hover-scale 1s linear infinite;
 }
 
-div h1 span#me {
-	color: blue;
+@keyframes hover-scale {
+	50% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.gradient-main-wrap h2 {
+	text-align: center;
+	font-size: 34px;
+	background: linear-gradient(
+		90deg,
+		hsl(0, 97%, 54%) 30%,
+		hsl(222, 97%, 34%) 60%,
+		hsl(80, 97%, 50%) 70%
+		);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+
+}
+
+.gradient1 {
+	background: 
+		linear-gradient(
+			45deg,
+			hsla(216, 100%, 44%, 1),
+			hsla(210, 100%, 44%, 1),
+			hsla(200, 100%, 44%, 1),
+			hsla(200, 100%, 60%, 1)
+		);
+}
+
+.gradient2 {
+	background: radial-gradient(
+		circle 220px,
+		hsl(106, 100%, 73%),
+		hsl(106, 100%, 53%),
+		hsl(106, 100%, 43%),
+		hsl(106, 100%, 33%)	
+	);
+}
+
+.gradient3 {
+	background:
+		linear-gradient(
+			45deg,
+			rgba(255, 0, 0, 0.611),
+			rgba(0, 0, 255, 0.584)
+		),
+		linear-gradient(
+			-45deg,
+			rgba(255, 0, 0, 0.711),
+			rgba(0, 0, 255, 0.684)
+		),
+		repeating-linear-gradient(
+			75deg,
+			rgba(255, 0, 0, 0.55) 0px,
+			transparent 20px,
+			rgba(0, 0, 0, 0.6) 40px
+		),
+		repeating-linear-gradient(
+			-140deg,
+			rgba(255, 0, 0, 0.945) 0px,
+			transparent 20px,
+			rgba(0, 0, 0, 1) 30px
+		);
+}
+
+.gradient4 {
+	background: 
+		repeating-linear-gradient(
+			60deg,
+			hsla(310, 100%, 50%, 0.7) 0%,
+			hsla(310, 100%, 50%, 0.2) 25%,
+			transparent 25%,
+			transparent 30%,
+			hsla(130, 100%, 50%, 0.7) 30%,
+			hsla(130, 100%, 50%, 0.2) 50%,
+			transparent 50%,
+			transparent 60%
+		),
+		repeating-linear-gradient(
+			-60deg,
+			hsla(0, 100%, 50%, 0.7) 0%,
+			hsla(0, 100%, 50%, 0.7) 25%,
+			hsla(240, 100%, 50%, 0.7) 25%,
+			hsla(240, 100%, 50%, 0.7) 50%,
+			hsla(78, 100%, 50%, 0.7) 50%,
+			hsla(78, 100%, 50%, 0.7) 50%
+		),
+		repeating-linear-gradient(
+			140deg,
+			hsla(180, 100%, 50%, 0.6) 0%,
+			hsla(180, 100%, 50%, 0.6) 25%,
+			hsla(34, 100%, 50%, 0.6) 25%,
+			hsla(34, 100%, 50%, 0.6) 50%,
+			hsla(78, 100%, 50%, 0.6) 75%
+		),
+		repeating-linear-gradient(
+			-140deg,
+			hsla(180, 100%, 50%) 0%,
+			hsla(180, 100%, 50%) 25%,
+			hsla(34, 100%, 50%) 25%,
+			hsla(34, 100%, 50%) 50%,
+			hsl(2, 100%, 50%) 75%
+		);
+}
+
+.gradient5 {
+	background: 
+		repeating-linear-gradient(
+			45deg,
+			hsla(300, 100%, 50%, 0.7) 0%,
+			hsla(300, 100%, 50%, 0.2) 25%,
+			transparent 25%,
+			transparent 30%,
+			hsla(258, 98%, 48%, 0.7) 30%,
+			hsla(258, 98%, 48%, 0.2) 50%,
+			transparent 50%,
+			transparent 60%
+		),
+		repeating-linear-gradient(
+			-45deg,
+			hsla(347, 100%, 50%, 0.7) 0%,
+			hsla(347, 100%, 50%, 0.4) 25%,
+			hsla(263, 100%, 50%, 0.7) 25%,
+			hsla(263, 100%, 50%, 0.7) 50%,
+			hsla(128, 96%, 45%, 0.7) 50%,
+			hsla(128, 96%, 45%, 0.4) 50%
+		),
+		repeating-linear-gradient(
+			-125deg,
+			hsla(180, 100%, 50%, 0.6) 0%,
+			hsla(180, 100%, 50%, 0.6) 25%,
+			hsla(315, 100%, 50%, 0.6) 25%,
+			hsla(315, 100%, 50%, 0.6) 50%,
+			hsla(345, 100%, 50%, 0.6) 75%
+		),
+		repeating-linear-gradient(
+			125deg,
+			hsla(180, 100%, 50%) 0%,
+			hsla(180, 100%, 50%) 25%,
+			hsl(276, 100%, 50%) 25%,
+			hsl(276, 100%, 50%) 50%,
+			hsl(2, 100%, 50%) 75%
+		);
 }
