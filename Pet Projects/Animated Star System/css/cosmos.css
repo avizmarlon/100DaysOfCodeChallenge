@@ -1,0 +1,61 @@
+:root {
+    --black: black;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+    
+.base-orbit {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    min-width: 1920px;
+    min-height: 1920px;
+    /* width: 100vw;
+    height: 100vh; */
+    background:
+    repeating-radial-gradient(
+        ellipse at -5% 50%,
+        transparent 0px 280px,
+        yellow 280px 288px
+    ) var(--black);
+}
+    
+.star, [class*="planet"] {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.star {
+    top: 805px;
+    left: -100px;
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    box-shadow:
+        0px 0px 2px 4px hsla(39, 100%, 50%, 1),
+        0px 0px 4px 8px hsla(39, 100%, 55%, 0.8),
+        0px 0px 8px 16px hsla(39, 100%, 65%, 0.75);
+}
+
+.planet1 {
+    top: 200px;
+    left: 0;
+    background-color: red;
+border: 2px solid orange;
+}

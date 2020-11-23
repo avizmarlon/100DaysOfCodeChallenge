@@ -96,11 +96,6 @@ div[class*="circle-container"] {
 	font-family: "Futura";
 }
 
-/* a.scale-up:hover,
-[class*="circle-container"]:hover {
-	animation: rotating3d 3s linear infinite;
-	transform-origin: 100px 0px;
-} */
 [class*="circle-container"] {
 	animation: rotating3d 2s linear infinite;
 	transform-origin: 100px 0px;
@@ -294,5 +289,443 @@ body {
 			hsl(276, 100%, 50%) 25%,
 			hsl(276, 100%, 50%) 50%,
 			hsl(2, 100%, 50%) 75%
+		);
+}
+
+.gradient6 {
+	background:
+		radial-gradient(
+			circle at 20px 10px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 80px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 200px 10px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 120px 100px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 110px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 380px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 310px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 310px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 220px 40px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 180px 95px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 250px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			ellipse at 50% 0,
+			red 0%,
+			red 70%,
+			green 70%,
+			green 75%,
+			transparent 75%
+		)
+	white;
+}
+
+.gradient7 {
+	background:
+		conic-gradient(
+			from 0deg,
+			white 0deg 90deg,
+			black 90deg 180deg,
+			blue 180deg
+		);
+	animation: moving-boxes 3s linear infinite;
+}
+	
+@keyframes moving-boxes {
+	33% {
+		background:
+			conic-gradient(
+				from 0deg,
+				blue 0deg 90deg,
+				white 90deg 180deg,
+				black 180deg
+			);
+	}
+	66% {
+		background:
+			conic-gradient(
+				from 0deg,
+				black 0deg 90deg,
+				blue 90deg 180deg,
+				white 180deg
+			);
+	}
+	99% {
+		background:
+			conic-gradient(
+				from 0deg,
+				white 0deg 90deg,
+				black 90deg 180deg,
+				blue 180deg
+			);
+	}
+}
+
+.gradient8 {
+	background:
+		repeating-radial-gradient(
+			at left bottom,
+			white 0px 40px,
+			cyan 40px 46px
+		);
+}
+
+.gradient9 {
+	position: relative;
+	background:
+		radial-gradient( /* Star */
+			circle at 60px 100px,
+			yellow 0px 20px,
+			orange 20px 23px,
+			transparent 23px
+		),
+		radial-gradient( /* 1st planet */
+			circle at 120px 117px,
+			red 0px 10px,
+			orange 10px 11px,
+			transparent 11px
+		),
+		radial-gradient( /* 2nd planet */
+			circle at 160px 62px,
+			orange 0px 7px,
+			yellow 7px 8px,
+			transparent 8px
+		),
+		radial-gradient( /* 3rd planet */
+			circle at 65px 28px,
+			blue 0px 12px,
+			white 12px 13px,
+			transparent 13px
+		),
+		radial-gradient( /* 4th planet */
+			circle at 383px 94px,
+			cyan 0px 15px,
+			purple 15px 16px,
+			transparent 16px
+		),
+		radial-gradient( /* 5th planet */
+			circle at 355px 18px,
+			white 0px 5px,
+			cyan 5px 6px,
+			transparent 6px
+		),
+		repeating-radial-gradient( /* Base System */
+			ellipse at 60px 100px,
+			yellow 0px 6px,
+			black 6px 80px
+		);
+}
+
+.gradient9::before { /* Stars */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 2px;
+	border-radius: 50%;
+	box-shadow: 
+		145px 25px 2px 1px white,
+		120px 17px 2px 2px white,
+		75px 32px 2px 0px white,
+		60px 50px 0px 1px white,
+		50px 18px 2px 1px white,
+		48px 37px 4px 3px white,
+		96px 7px 2px 0px white,
+		12px 2px 2px 0px white,
+		20px 125px 2px 0px white,
+		200px 80px 0px 0px white,
+		180px 62px 0px 0px white,
+		350px 28px 0px 0px white,
+		320px 64px 0px 0px white,
+		40px 52px 0px 0px white,
+		110px 70px 0px 0px white,
+		125px 86px 0px 0px white,
+		75px 120px 0px 0px white,
+		158px 96px 1px 2px white,
+		167px 32px 0px 0px white,
+		214px 29px 0px 0px white,
+		320px 110px 2px 2px white,
+		380px 82px 0px 0px white,
+		390px 18px 1px 1px white,
+		280px 6px 0px 0px white,
+		290px 120px 0px 0px white,
+		250px 125px 0px 0px white,
+		270px 96px 0px 0px white;
+	animation: stars-anim 1s linear infinite;
+}
+
+/* seems to consume too many resources */
+/* @keyframes stars-anim {
+	50% {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2px;
+		height: 2px;
+		border-radius: 50%;
+		box-shadow: 
+			145px 25px 2px 1.5px white,
+			120px 17px 2px 2.5px white,
+			75px 32px 2px 0.5px white,
+			60px 50px 0px 1.5px white,
+			50px 18px 2px 1.5px white,
+			48px 37px 2px 3.5px white,
+			96px 7px 2px 0.5px white,
+			12px 2px 2px 0.5px white,
+			20px 125px 2px 0.5px white,
+			200px 80px 0px 0.5px white,
+			180px 62px 0px 0.5px white,
+			350px 28px 0px 0.5px white,
+			320px 64px 0px 0.5px white,
+			40px 52px 0px 0.5px white,
+			110px 70px 0px 0.5px white,
+			125px 86px 0px 0.5px white,
+			75px 120px 0px 0.5px white,
+			158px 96px 1px 2.5px white,
+			167px 32px 0px 0.5px white,
+			214px 29px 0px 0.5px white,
+			320px 110px 2px 2.5px white,
+			380px 82px 0px 0.5px white,
+			390px 18px 1px 1.5px white,
+			280px 6px 0px 0.5px white,
+			290px 120px 0px 0.5px white,
+			250px 125px 0px 0.5px white,
+			270px 96px 0px 0.5px white;
+	}
+} */
+
+.vertical-text {
+	transform: rotate(-90deg);
+}
+
+div p.vertical-text { /* Melon */
+	font-size: 24px;
+	position: absolute;
+	left: -45px;
+	top: 45px;
+
+}
+
+.rel-pos {
+	position: relative;
+}
+
+.melon {
+	position: absolute;
+	top: 5px;
+	left: 65px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	font-size: initial;
+	background:
+		radial-gradient(
+			circle at 20px 10px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 80px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 200px 10px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 120px 100px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 110px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 380px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 310px 20px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 310px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 220px 40px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 180px 95px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			circle at 250px 70px,
+			black 2px,
+			transparent 2px
+		),
+		radial-gradient(
+			ellipse at 50% 0,
+			red 0%,
+			red 55%,
+			green 55%,
+			green 70%,
+			transparent 70%
+		);
+}
+
+.gradient10 {
+	background:
+		linear-gradient(
+			hsla(215, 100%, 50%, 0.6),
+			hsla(215, 50%, 20%, 0.6)
+		),
+		repeating-linear-gradient(
+			0deg,
+			hsla(184, 100%, 74%, 0.61) 20% 35%,
+			transparent 35% 60%
+		),
+		linear-gradient(
+			105deg,
+			hsl(224, 100%, 61%) 0% 50%,
+			hsl(224, 50%, 61%) 50% 100%
+		);
+}
+
+.gradient11 {
+	background:
+		radial-gradient(
+			circle at 130px 80px,
+			hsla(14, 100%, 50%, 0.6) 0px 30px,
+			transparent 100px 200px,
+			hsla(190, 100%, 50%, 0.8) 300px 500px
+		),
+		repeating-linear-gradient(
+			45deg,
+			hsla(355, 100%, 50%, 0.704) 0px 100px,
+			transparent 200px 300px,
+			hsla(310, 100%, 50%, 0.704) 500px
+		),
+		repeating-linear-gradient(
+			-45deg,
+			hsla(286, 100%, 50%, 0.704) 0 100px,
+			transparent 200px 300px,
+			hsla(286, 100%, 50%, 0.704) 500px
+		),
+		linear-gradient(
+			120deg,
+			hsla(340, 100%, 50%, 0.711),
+			hsla(258, 100%, 50%, 0.711)
+		)
+}
+
+.gradient12 {
+	background:
+		linear-gradient(
+			45deg,
+			hsla(39, 100%, 50%, 0.588),
+			hsla(152, 100%, 50%, 0.711)
+		),
+		linear-gradient(
+			-45deg,
+			hsla(0, 100%, 50%, 0.588),
+			hsla(240, 100%, 50%, 0.711)
+		),
+		repeating-linear-gradient(
+			120deg,
+			hsla(30, 100%, 50%, 0.788) 0px,
+			transparent 20px,
+			hsla(0, 100%, 50%, 0.811) 40px
+		),	
+		repeating-linear-gradient(
+			-120deg,
+			hsla(150, 100%, 50%, 0.588) 0px,
+			transparent 20px,
+			hsla(0, 100%, 0%, 0.811) 40px
+			),
+		repeating-linear-gradient(
+			-60deg,
+			hsla(184, 100%, 50%, 0.588) 0px,
+			hsla(266, 100%, 50%, 0.611) 30px,
+			hsla(313, 100%, 50%, 0.611) 60px
+		),	
+		repeating-linear-gradient(
+			60deg,
+			hsla(192, 100%, 50%, 0.888) 0px,
+			hsla(278, 100%, 50%, 0.911) 30px,
+			hsla(0, 100%, 50%, 0.911) 60px
+		);	
+}
+
+.gradient13 {
+	background:
+		repeating-linear-gradient(
+			0deg,
+			hsla(0, 100%, 25%, 0.2) 0px 20px,
+			transparent 20px 50px,
+			hsla(24, 100%, 50%, 0.2) 50px 80px
+		),
+		repeating-linear-gradient(
+			180deg,
+			hsla(249, 100%, 25%, 0.2) 0px 20px,
+			transparent 20px 50px,
+			hsla(24, 100%, 50%, 0.2) 50px 80px
+		),
+		linear-gradient(
+			-90deg,
+			hsla(300, 100%, 25%, 1),
+			hsla(39, 100%, 50%, 1) 
 		);
 }
