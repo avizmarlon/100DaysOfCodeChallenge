@@ -7,6 +7,7 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
+    background-color: var(--black);
 }
 
 body::before {
@@ -16,46 +17,110 @@ body::before {
     left: 0;
     border-radius: 50%;
 }
-    
-.base-orbit {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    min-width: 1920px;
-    min-height: 1920px;
-    /* width: 100vw;
-    height: 100vh; */
-    background:
-    repeating-radial-gradient(
-        ellipse at -5% 50%,
-        transparent 0px 280px,
-        yellow 280px 288px
-    ) var(--black);
+
+.main-wrap {
+    position: absolute;
+    top: 0vmin;
+    left: 0vmin;
+    border: 5px solid white;
+    width: 100vmin;
+    height: 100vmin;
+    transform: scale(1);
 }
-    
+
+/* .base-orbit {
+    min-width: 3000px;
+    min-height: 3000px;
+    background:
+    radial-gradient(
+        ellipse at -5% 32%,
+        transparent 0px 880px,
+        yellow 880px 888px,
+        transparent 888px 1168px,
+        yellow 1168px 1176px,
+        transparent 1176px 1456px,
+        yellow 1456px 1464px,
+        transparent 1464px 1744px
+    );
+} */
+
+.orbits-wrap {
+    position: absolute;
+    width: 60vmin;
+    height: 60vmin;
+    bottom: -3vmin;
+    left: -80vmin;
+    /* border: 10px solid green; */
+    transform: rotateX(75deg);
+}
+
+[class*="orbit-line"] {
+    transform: skewY(-25deg);
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid;
+}
+
+.orbit-line-1 {
+    top: 0vmin;
+    left: 0vmin;
+    width: 164vmin;
+    height: 164vmin;
+    border-color: red;
+}
+.orbit-line-2 {
+    top: -15vmin;
+    left: -20vmin;
+    width: 205vmin;
+    height: 205vmin;
+    border-color: blue;    
+}
+.orbit-line-3 {
+    top: -55vmin;
+    left: -50vmin;
+    width: 285vmin;
+    height: 285vmin;
+    border-color: green;    
+
+}
+.orbit-line-4 {
+
+}
+.orbit-line-5 {
+
+}
+.orbit-line-6 {
+
+}
+
 .star, [class*="planet"] {
     position: absolute;
     top: 0;
+    left: 0;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 20vmin;
+    height: 20vmin;
 }
 
 .star {
-    top: 805px;
-    left: -100px;
-    height: 300px;
-    width: 300px;
+    /* visibility: hidden; */
+    top: 70vmin;
+    left: -30vmin;
+    height: 60vmin;
+    width: 60vmin;
     background-color: yellow;
     box-shadow:
         0px 0px 2px 4px hsla(39, 100%, 50%, 1),
         0px 0px 4px 8px hsla(39, 100%, 55%, 0.8),
-        0px 0px 8px 16px hsla(39, 100%, 65%, 0.75);
+        0px 0px 8px 16px hsla(39, 100%, 65%, 0.75),
+        0px 0px 16px 32px hsla(24, 100%, 65%, 0.75);
 }
 
 .planet1 {
-    top: 200px;
-    left: 0;
+    width: 2vmin;
+    height: 2vmin;
+    top: 0vmin;
+    left: 0vmin;
     background-color: red;
-border: 2px solid orange;
+    border: 2px solid orange;
 }
