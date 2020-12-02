@@ -9,3 +9,7 @@ Before moving on, I want to make sure I will be able to make the planets rotate 
 ---
 
 I'm having trouble figuring out how to make the planet move along the elliptic orbit lines.
+
+My current solution is to create a circle representing a planet as the child element of the element representing the orbit and lock the planet element to its parent, setting the transform-origin to the center of the circular orbit line, then rotate the planet 360deg along the orbit line. Then I "convert" the circular shape of the orbit line into an ellipse by using `transform: skew()` and `transform: rotate()`.
+
+The problem is that the planet is also affected by the transforms and so it looks really weird.

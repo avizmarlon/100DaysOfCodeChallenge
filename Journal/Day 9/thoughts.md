@@ -1,3 +1,5 @@
+# Day 9
+
 The `float` property goes hand in hand with the `clear` property.
 
 `float` is like another value for the `display` property (but not really), because it kinda of creates its own layer on the document flow. The element that receives the `float` property is removed from the normal flow of the document and is placed on the "float-level" layer of the page. Similar to an element that receives `position:absolute` or has their `display` property changed.
@@ -11,22 +13,22 @@ You can use `width` to determine how much space of its parent element the floate
 ```html
 <style>
 .container {
-	padding: 2px;
-	margin: 2px;
-	width: 1000px;
+    padding: 2px;
+    margin: 2px;
+    width: 1000px;
 }
 
 .floated {
-	float: left;
-	width: 32%;
-	margin: 2px;
+    float: left;
+    width: 32%;
+    margin: 2px;
 }
 </style>
 
 <div>
-	<img src="cat.png" class="floated">
-	<img src="dog.png" class="floated">
-	<img src="bird.png" class="floated">
+    <img src="cat.png" class="floated">
+    <img src="dog.png" class="floated">
+    <img src="bird.png" class="floated">
 </div>
 ```
 
@@ -39,26 +41,26 @@ Using the example above:
 ```html
 <style>
 .container {
-	padding: 2px;
-	margin: 2px;
-	width: 1000px;
+    padding: 2px;
+    margin: 2px;
+    width: 1000px;
 }
 
 .floated {
-	float: left;
-	width: 32%;
-	margin: 2px;
+    float: left;
+    width: 32%;
+    margin: 2px;
 }
 
 .clear-left {
-	clear: left;
+    clear: left;
 }
 </style>
 
 <div>
-	<img src="cat.png" class="floated">
-	<img src="dog.png" class="floated clear-left">
-	<img src="bird.png" class="floated">
+    <img src="cat.png" class="floated">
+    <img src="dog.png" class="floated clear-left">
+    <img src="bird.png" class="floated">
 </div>
 ```
 

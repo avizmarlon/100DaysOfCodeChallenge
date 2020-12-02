@@ -1,3 +1,5 @@
+# Day 1
+
 Today I start this journey of coding for 100 days straight. This is especially interesting for me, because I was aimless and had a stagnating life for a long time and had a problem with procrastination. So I hope that this will keep me accountable and disciplined.
 
 I'm starting the FCC curriculum from the beginning (html basics) and I plan to have a respectable knowledge of front-end and back-end technologies by the end of it. I will be updating the code as I progress through the roadmap.

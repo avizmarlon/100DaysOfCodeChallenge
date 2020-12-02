@@ -1,50 +1,205 @@
-body {
-    background-color: black;
+:root {
+    --black: black;
 }
 
-.base-orbit {
+body {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: var(--black);
+}
+
+body::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:
-        translate(-50%, -50%)
-        rotateX(75deg);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.main-wrap {
+    position: absolute;
+    top: 0vmin;
+    left: 0vmin;
+    /* border: 5px solid white; */
+    width: 100vmin;
+    height: 100vmin;
+    transform: scale(0.8);
+}
+
+.orbits-wrap {
+    position: absolute;
+    width: 60vmin;
+    height: 60vmin;
+    bottom: -3vmin;
+    left: -80vmin;
+    /* border: 10px solid green; */
+    transform: rotateX(75deg);
 }
 
 [class*="orbit-line"] {
-    transform: skewY(-35deg);
+    transform: skewY(-25deg);
+    transform-style: flat;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     border: 5px solid;
 }
 
-.orbit-line {
+.orbit-line-1 {
     top: 0vmin;
     left: 0vmin;
-    width: 50vmin;
-    height: 50vmin;
+    width: 164vmin;
+    height: 164vmin;
     border-color: red;
 }
+.orbit-line-2 {
+    top: -15vmin;
+    left: -20vmin;
+    width: 205vmin;
+    height: 205vmin;
+    border-color: blue;    
+}
+.orbit-line-3 {
+    top: -55vmin;
+    left: -50vmin;
+    width: 285vmin;
+    height: 285vmin;
+    border-color: green;    
 
-.planet-wrap {
-    animation: planet-anim 4s linear infinite;
-    position: relative;
-    transform: translate(-50%, -50%);
-    transform-origin: 5vmin 30vmin;
-    top: 0%;
-    left: 50%;
-    background-color: blue;
-    border-radius: 50%;
-    height: 10vmin;
-    width: 10vmin;
 }
 
-.planet {
+/* .orbit-line-4 {
+
+}
+.orbit-line-5 {
+
+}
+.orbit-line-6 {
+
+} */
+
+.star, [class*="planet"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 20vmin;
+    height: 20vmin;
+}
+
+.star {
+    visibility: hidden;
+    top: 70vmin;
+    left: -30vmin;
+    height: 60vmin;
+    width: 60vmin;
+    background-color: hsl(60, 100%, 50%);
+    box-shadow:
+        0 0 1vmin 1vmin hsla(56, 100%, 50%, 0.8),
+        0 0 2vmin 2vmin hsla(45, 100%, 55%, 0.8),
+        0 0 4vmin 4vmin hsla(39, 100%, 55%, 0.75),
+        0 0 8vmin 8vmin hsla(24, 100%, 55%, 0.70),
+        0 0 16vmin 16vmin hsla(20, 100%, 55%, 0.50);
+        animation: star-anim 10s linear infinite;
+    }
+    
+@keyframes star-anim {
+    50% {
+        box-shadow:
+            0 0 1.9vmin 1.9vmin hsla(56, 100%, 50%, 0.8),
+            0 0 2.9vmin 2.9vmin hsla(45, 100%, 55%, 0.8),
+            0 0 4.9vmin 4.9vmin hsla(39, 100%, 55%, 0.75),
+            0 0 8.9vmin 8.9vmin hsla(24, 100%, 55%, 0.70),
+            0 0 16.9vmin 16.9vmin hsla(20, 100%, 55%, 0.50);
+
+    }
+}
+
+.planet1 {
+    width: 8vmin;
+    height: 8vmin;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 4vmin 86vmin;
+    background-color: hsla(12, 100%, 50%, 1);
+    animation: planet1-anim 10s linear infinite;
+    box-shadow:
+        0vmin 0vmin 0vmin 1vmin hsl(94, 100%, 50%, 1),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(14, 100%, 50%, 0.8);
+        
+}
+
+/* .planet1::before {
+    content:"";
+    border-radius: 50%;
+    width: 8vmin;
+    height: 8vmin;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 4vmin 86vmin;
+    background-color: hsla(12, 100%, 50%, 1);
+    box-shadow:
+        2vmin 2vmin 0vmin 1vmin hsl(14, 100%, 50%),
+         -2vmin 0px 0vmin 1vmin hsl(14, 100%, 50%),
+        0 0 0.5vmin 0.5vmin hsl(14, 100%, 50%, 0.8);
+} */
+
+@keyframes planet1-anim {
+    100.0% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+} 
+
+.planet2 {
+    width: 8vmin;
+    height: 8vmin;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 4vmin 86vmin;
+    background-color: hsla(12, 100%, 50%, 1);
+    box-shadow: 0vmin 0vmin 0.5vmin 0.5vmin hsl(14, 100%, 50%, 0.8);
+}
+
+.planet2::before {
+    content:"";
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 0vmin;
+    left: 0vmin;
+    width: 8vmin;
+    height: 8vmin;
     
 }
 
-/* @keyframes planet-anim {
-    100% {
-        transform: translate(-50%, -50%) rotate(1turn);
+.test-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vmin;
+    height: 30vmin;
+    background-color: green;
+    transform: rotateX(60deg) skewY(55deg);
+}
+
+.planet-test {
+    height: 40vmin;
+    width: 20vmin;
+    background-color: yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewY(-55deg);
+    transform-origin: 50% 50%;
+    animation: planet-test-anim 0.4s linear infinite;
+}
+
+@keyframes planet-test-anim {
+    50% {
+        transform: translate(-50%, -50%) skewY(-55deg);
     }
-} */
+}

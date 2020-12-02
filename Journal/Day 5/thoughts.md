@@ -1,27 +1,29 @@
+# Day 5
+
 Using % as a length unit in property values when defining properties such as `width`, will set the element's width to a % of its parent element (such as a div), or the total webpage width when there is no parent containing element. E.g.:
 
 ```html
 <style>
-	.main-box {
-		width: 100%;
-	}
+    .main-box {
+        width: 100%;
+    }
 
-	.text-box {
-		width: 50%;
-	}
+    .text-box {
+        width: 50%;
+    }
 
-	.footer-box {
-		width: 75%;
-	}
+    .footer-box {
+        width: 75%;
+    }
 </style>
 
 <div class="main-box">
-	<div class="text-box">
-		<p>Ipsum Ipsum?</p>
-	</div>
-	<div class="footer-box">
-		<p>Copyright</p>
-	</div>
+    <div class="text-box">
+        <p>Ipsum Ipsum?</p>
+    </div>
+    <div class="footer-box">
+        <p>Copyright</p>
+    </div>
 </div>
 ```
 

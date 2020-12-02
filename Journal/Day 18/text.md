@@ -6,7 +6,7 @@ Apparently any gradient pattern can be made using gradient-related functions. I 
 
 I had a little trouble understanding the repeating version of the gradients, but now I understand and it seems SO DAMN EASY. It's amazing how something that was seemingly confusing becomes so easy and intuitive once you think about it, read from other sources, watch videos, play with the code, break it, change it and see what happens -- all of this helps understanding a concept. I'm glad I did the Coursera's course "Learning how to Learn" by Barbara Oakley. Learning is much easier with her methods, but I digress.
 
-### linear-gradient()
+## linear-gradient()
 
 It's used to make non-repeating smooth transitions between two or more colors. If undefined, the direction argument will default to the equivalent of `180deg` (or top to bottom). The direction argument is usually the first argument for the linear-gradient() function. All other arguments are color and their position stops.
 

@@ -1,3 +1,5 @@
+# Day 6
+
 I used my session today to start a pet project using what I've learned so far. I call it Color Trivia. Just a website to share trivia facts about colors and also interesting statistical data on the usage of colors throughout the web and history.
 
 I was creating the logo area and I wanted to center the logo image and the logo text, while also making them clickable with anchor elements.

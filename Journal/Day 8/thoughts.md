@@ -1,4 +1,6 @@
-# `position: static;`, `position: absolute;`, `position: relative;`, `position: fixed;` and `position: sticky;`
+# Day 8
+
+## `position: static;`, `position: absolute;`, `position: relative;`, `position: fixed;` and `position: sticky;`
 
 ## `position:static;`
 
@@ -33,7 +35,7 @@ The element being affected by these properties and the properties themselves can
 
 If you use negative values to these properties, then the opposite happens, the element will be "attracted" to that side. E.g.: Setting the top to -10px, will make the element move TOWARDS that side, essentially moving up.
 
-# document flow
+## document flow
 
 Refers to the way the elements are ordered in the HTML document.
 

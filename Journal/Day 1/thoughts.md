@@ -1,3 +1,5 @@
+# Day 1
+
 Most tags can be easily remembered by their "full name", e.g.:
 `<ul>` = unordered list, the tag is made by the initials of the full name, same as `<ol>` = ordered list or `<li>` = list item
 `<p>` = paragraph
@@ -10,11 +12,13 @@ This makes it pretty easy to remember them. The tags are usually self-descriptiv
 Remembering the best practice of setting a for attribute in a label element nesting an input element with an id attribute to aid assistive tech in creating relationships between those elements.
 
 The following `<label>` is "for" the nested `<input>` "id"entified by `id="id"`.
+
 ```html
 <label for="awesome-input>
     <input id="awesome-input">
 </label>
 ```
+
 Extra tip: this also allows the user to click any part of the text associated with a button to select an option instead of having to click the button itself. Small, but quality-of-life adjustments like this goes a long way for the user experience.
 
 Example:
@@ -56,5 +60,3 @@ If the user selects the first option (Number 1), the submitted form data would b
 `number1` is the value of the `value` attribute of the chosen option (Number 1).
 
 If the chosen option doesn't have a `value` attribute or it's empty, it will default to `on`, which isn't meaningful; its as bad as naming a variable `variable = "this is a variable. lol`, and is bound to cause confusion in the future.
-
---------------

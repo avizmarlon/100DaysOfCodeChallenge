@@ -28,7 +28,7 @@ So I can make an element scale up (increase in size) when the user hovers it. Li
 
 This will double the element's size when the user hovers it. It's really cool. I love it.
 
-*You can use multiple functions for the value of a transform property, you just need to separate the functions with a whitespace*
+Note: *You can use multiple functions for the value of a transform property, you just need to separate the functions with a whitespace*
 
 ### transform-origin
 
@@ -38,13 +38,14 @@ For example: when you use the rotate() function, you're telling the element to r
 
 ---
 
-## pseudo-classes, pseudo-elements and :: vs :
+## pseudo-classes, pseudo-elements and :: vs : selectors
 
 ### **pseudo-classes**
+
 They represent different states of an element, so you can apply css rules to an element that is in a specific state. There are many pseudo-classes like:
 
 :hover  
-:checked    
+:checked
 :empty  
 :focus  
 :visited

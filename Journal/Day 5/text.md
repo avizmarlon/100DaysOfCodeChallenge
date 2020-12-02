@@ -1,3 +1,5 @@
+# Day 5
+
 I spent some time thinking of some pet project to start working towards and implement whatever I learn on it.
 
 I think I will try something called Color Trivia, in which the website will give interesting trivia facts about colors and whatever cool stuff I come up with. I just needed a basic idea of something to build so I'm not limited to the "cat photo app" used during FCC lessons.

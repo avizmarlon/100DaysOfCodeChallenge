@@ -1,3 +1,5 @@
+# Day 7
+
 I learned a really cool property today -- `box-shadow`. Omg, I really love this property. I applied to my color pie and modified it so that it looks shiny with neon lights. I loooove it. I can imagine some really cool stuff that can be made with it.
 
 Now I messed around with border-radius on specific edges and the color pie transformed into a neon colorful flower.
@@ -6,12 +8,12 @@ I wanted to make my logo text gradient so I went ahead and researched how to do 
 
 ```css
 .gradient-text {
-	background: rgb(255,98,0);
-	background: linear-gradient(90deg, rgba(255,98,0,1) 0%, rgba(0,255,175,1) 52%, rgba(154,0,255,1) 100%);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	-moz-text-fill-color: transparent;
-	-moz-background-clip: text;
+    background: rgb(255,98,0);
+    background: linear-gradient(90deg, rgba(255,98,0,1) 0%, rgba(0,255,175,1) 52%, rgba(154,0,255,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-background-clip: text;
 }
 ```
 

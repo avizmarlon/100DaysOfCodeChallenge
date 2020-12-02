@@ -22,27 +22,11 @@ body::before {
     position: absolute;
     top: 0vmin;
     left: 0vmin;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     width: 100vmin;
     height: 100vmin;
-    transform: scale(0.4);
+    transform: scale(0.5);
 }
-
-/* .base-orbit {
-    min-width: 3000px;
-    min-height: 3000px;
-    background:
-    radial-gradient(
-        ellipse at -5% 32%,
-        transparent 0px 880px,
-        yellow 880px 888px,
-        transparent 888px 1168px,
-        yellow 1168px 1176px,
-        transparent 1176px 1456px,
-        yellow 1456px 1464px,
-        transparent 1464px 1744px
-    );
-} */
 
 .orbits-wrap {
     position: absolute;
@@ -58,10 +42,11 @@ body::before {
     transform: skewY(-25deg);
     border-radius: 50%;
     position: absolute;
-    border: 5px solid;
+    border: 0.5vmin solid;
 }
 
 .orbit-line-1 {
+    z-index: 6;
     top: 0vmin;
     left: 0vmin;
     width: 164vmin;
@@ -69,6 +54,7 @@ body::before {
     border-color: red;
 }
 .orbit-line-2 {
+    z-index: 5;
     top: -15vmin;
     left: -20vmin;
     width: 205vmin;
@@ -76,21 +62,48 @@ body::before {
     border-color: blue;    
 }
 .orbit-line-3 {
-    top: -55vmin;
-    left: -50vmin;
+    z-index: 4;
+    top: -19vmin;
+    left: -60vmin;
     width: 285vmin;
     height: 285vmin;
     border-color: green;    
 
 }
 .orbit-line-4 {
+    z-index: 3;
+    top: -25vmin;
+    left: -125vmin;
+    width: 420vmin;
+    height: 420vmin;
+    border-color: purple;
 
 }
 .orbit-line-5 {
-
+    z-index: 2;
+    top: -28vmin;
+    left: -165vmin;
+    width: 500vmin;
+    height: 500vmin;
+    border-color: white;
 }
 .orbit-line-6 {
+    z-index: 1;
+    top: -30vmin;
+    left: -220vmin;
+    width: 600vmin;
+    height: 600vmin;
+    border-color: hsl(20, 100%, 50%);
 
+}
+
+.p1-wrap,
+.p2-wrap,
+.p3-wrap,
+.p4-wrap,
+.p5-wrap,
+.p6-wrap {
+    position: absolute;
 }
 
 .star, [class*="planet"] {
@@ -130,20 +143,184 @@ body::before {
     }
 }
 
+.p1-wrap {
+    top: 160vmin;
+    left: 80vmin;
+    animation: p1-wrap-anim 10s linear infinite;
+}
+
+@keyframes p1-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 .planet1 {
     width: 8vmin;
-    height: 8vmin;
+    height: 32vmin;
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transform-origin: 4vmin 86vmin;
+    transform-origin: 1.5vmin 97vmin; /* original: 4vmin 86vmin */
     background-color: hsla(12, 100%, 50%, 1);
-    box-shadow: 0px 0px 0.5vmin 0.5vmin hsl(14, 100%, 50%, 0.8);
     animation: planet1-anim 10s linear infinite;
+    box-shadow: 0vmin 0vmin 0.5vmin 0.5vmin hsl(12, 100%, 60%, 0.8);
 }
 
 @keyframes planet1-anim {
     100.0% {
         transform: translate(-50%, -50%) rotate(1turn);
     }
-} 
+}
+
+.p2-wrap {
+    top: 200vmin;
+    left: 102vmin;
+    animation: p2-wrap-anim 5s linear infinite;
+
+}
+
+@keyframes p2-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.planet2 {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+    width: 8vmin;
+    height: 32vmin;
+    border-radius: 50%;
+    transform-origin: 2vmin 118vmin;
+    animation: planet2-anim 5s linear infinite;
+
+}
+
+@keyframes planet2-anim {
+    100.0% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.p3-wrap {
+    top: 283vmin;
+    left: 132vmin;
+    animation: p3-wrap-anim 3s linear infinite;
+}
+
+@keyframes p3-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.planet3 {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: -10.5vmin 158vmin;
+    background-color: green;
+    width: 8vmin;
+    height: 32vmin;
+    animation: planet3-anim 3s linear infinite;
+
+}
+
+@keyframes planet3-anim {
+    100.0% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.p4-wrap {
+    top: 420vmin;
+    left: 200vmin;
+    animation: p4-wrap-anim 15s linear infinite;
+}
+
+@keyframes p4-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.planet4 {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: -5vmin 227vmin;
+    background-color: purple;
+    width: 8vmin;
+    height: 32vmin;
+    animation: planet4-anim 15s linear infinite;
+
+}
+
+@keyframes planet4-anim {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.p5-wrap {
+    top: 500vmin;
+    left: 245vmin;
+    animation: p4-wrap-anim 7s linear infinite;
+}
+
+@keyframes p5-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.planet5 {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: -5vmin 265vmin;
+    background-color: white;
+    width: 8vmin;
+    height: 32vmin;
+    animation: planet4-anim 7s linear infinite;
+
+}
+
+@keyframes planet5-anim {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.p6-wrap {
+    top: 600vmin;
+    left: 300vmin;
+    animation: p4-wrap-anim 21s linear infinite;
+}
+
+@keyframes p6-wrap-anim {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.planet6 {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0vmin 317vmin;
+    background-color: hsl(20, 100%, 50%);
+    width: 8vmin;
+    height: 32vmin;
+    animation: planet4-anim 21s linear infinite;
+
+}
+
+@keyframes planet6-anim {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}

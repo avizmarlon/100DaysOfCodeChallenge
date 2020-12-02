@@ -1,4 +1,6 @@
-# Fallback for browser compatibility
+# Day 4
+
+## Fallback for browser compatibility
 
 Sometimes a browser won't understand a css declaration, for being not updated (old version) or simply lack the necessary technology to interpret it. In this case, it's ideal to set a more widely accepted css declaration, be it the property, the selector or the property value.
 
@@ -6,12 +8,12 @@ E.g.:
 
 ```css
 :root {
-	--big-font: 8em;
+    --big-font: 8em;
 }
 
 .main-font {
-	font-size: 8em;
-	font-size: var(--big-font, 8em);
+    font-size: 8em;
+    font-size: var(--big-font, 8em);
 }
 ```
 
@@ -25,13 +27,13 @@ Simple responsive web-design stuff I suppose. Like, resizing a webpage banner im
 
 ```css
 :root {
-	--banner-size: 300px;
+    --banner-size: 300px;
 }
 
 @media (max-width: 300px) {
-	:root {
-	--banner-size: 100px;
-	}
+    :root {
+    --banner-size: 100px;
+    }
 }
 ```
 

@@ -20,7 +20,7 @@ body {
 }
 
 .position-test2 {
-	positiona: ;
+	position: absolute;
 
 }
 
@@ -28,9 +28,9 @@ body {
 	border: var(--test-border)
 }
 
-.logo-area {
-	/*placeholder*/
-}
+/* .logo-area {
+
+} */
 
 .big-text-color {
 	color: var(--big-text-color);
@@ -43,10 +43,17 @@ body {
 }
 
 .gradient-hover:hover {
-	background: rgb(255,98,0);
-	background: linear-gradient(90deg, rgba(255,98,0,1) 0%, rgba(0,255,175,1) 52%, rgba(154,0,255,1) 100%);
-	-webkit-text-fill-color: transparent;
+	background:
+		linear-gradient(
+			90deg,
+			hsl(23, 100%, 50%) 0%,
+			hsl(161, 100%, 50%) 52%,
+			hsl(276, 100%, 50%)
+		)
+			rgb(255,98,0); /* Background-color */
+	background-clip: text;
 	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
 	-moz-background-clip: text;
 }

@@ -25,6 +25,3 @@ Making a tone of the color can be done adjusting the saturation value. The small
 Combining different saturation and lightness values allows for a lot of possible variations of a hue (color).
 
 Changing lightness and/or saturation while keeping the same hue is useful to create accent colors. E.g.: you pick a hue to be the dominant color and then use the same hue, but with different saturation and lightness levels in other parts of the website to accentuate them in relation to the dominant color.
-
----
-

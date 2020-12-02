@@ -1,6 +1,6 @@
 # Day 20
 
-## \#keyframes animation
+## \@keyframes animation
 
 Animation of html elements can be done with the combination of the `animation` property and the `@keyframes` at-rule.
 

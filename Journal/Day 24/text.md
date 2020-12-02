@@ -14,6 +14,6 @@ So I ended using multiple nested divs for each orbit line. This way I was able t
 
 It was also key to use relative units instead of absolute units, because everything would fall out of place when resizing the window, so I started using relative values. I think the only property using absolute value is the border (which makes the orbit line) and some "draft" borders that I use while "drawing" the project in the browser.
 
-I'm using the vmin relative unit, but I have a feeling I will have to change to vw and vh. The reason is that when I resized (decreased) the window horizontally the elements would go up in an unpleasant way. 
+I'm using the vmin relative unit, but I have a feeling I will have to change to vw and vh. The reason is that when I resized (decreased) the window horizontally the elements would go up in an unpleasant way.
 
 Will test tomorrow and see the differences. For today, I think it's enough. Gotta sleep too.
