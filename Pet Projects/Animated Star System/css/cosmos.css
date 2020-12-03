@@ -4,7 +4,6 @@
 
 body {
     overflow: hidden;
-    position: relative;
     padding: 0;
     margin: 0;
     background-color: var(--black);
@@ -28,13 +27,101 @@ body::before {
     transform: scale(0.5);
 }
 
+.background-stars {
+    position: absolute;
+    top: -50vmin;
+    left: -50vmin;
+    animation: flickering 0.1s linear infinite;
+}
+
+@keyframes flickering {
+    50% {
+        opacity: 0.8;
+    }
+}
+    
+.background-stars::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.0vmin;
+    height: 1.0vmin;
+    border-radius: 50%;
+    box-shadow:
+        10vmin 10vmin 2vmin 1.6vmin white,
+        20vmin 20vmin 1vmin 1vmin white,
+        45vmin 7vmin 1vmin 0.25vmin white;
+
+}
+
+/* /start ------------------ Falling Stars------------------ */
+
+.falling-star1 {
+    position: absolute;
+    top: -10vmin;
+    left: 380vmin;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    transform-origin: 0vmin 1000vmin;
+    animation: falling-star1-anim 20s linear infinite;
+}
+
+@keyframes falling-star1-anim {
+    100% {
+        transform: rotate(-0.5turn);
+    }
+}
+
+.falling-star2 {
+    position: absolute;
+    top: -10vmin;
+    left: -380vmin;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    transform-origin: 0vmin 1000vmin;
+    animation: falling-star2-anim 15s 5s linear infinite;
+}
+
+@keyframes falling-star2-anim {
+    100% {
+        transform: rotate(0.5turn);
+    }
+}
+
+.falling-star3 {
+    position: absolute;
+    top: 250vmin;
+    left: 300vmin;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    transform-origin: -400vmin 500vmin;
+    animation: falling-star3-anim 20s 9s linear infinite;
+}
+
+@keyframes falling-star3-anim {
+    100% {
+        transform: rotate(-0.5turn);
+    }
+}
+
+/* /end ------------------ Falling Stars ------------------ */
+
 .orbits-wrap {
     position: absolute;
     width: 60vmin;
     height: 60vmin;
     bottom: -3vmin;
     left: -80vmin;
-    /* border: 10px solid green; */
     transform: rotateX(75deg);
 }
 
@@ -93,7 +180,7 @@ body::before {
     left: -220vmin;
     width: 600vmin;
     height: 600vmin;
-    border-color: hsl(20, 100%, 50%);
+    border-color: hsl(184, 100%, 50%);
 
 }
 
@@ -312,7 +399,7 @@ body::before {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: 0vmin 317vmin;
-    background-color: hsl(20, 100%, 50%);
+    background-color: hsl(184, 100%, 50%);
     width: 8vmin;
     height: 32vmin;
     animation: planet4-anim 21s linear infinite;
