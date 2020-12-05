@@ -9,13 +9,14 @@ body {
     background-color: var(--black);
 }
 
-body::before {
-    content: "";
-    position: absolute;
+/* .navbar-wrap {
+    position: fixed;
     top: 0;
     left: 0;
-    border-radius: 50%;
-}
+    width: 100%;
+    height: 2.5vmin;
+    background-color: hsla(0, 0%, 16%, 0.87);
+} */
 
 .main-wrap {
     position: absolute;
@@ -27,7 +28,9 @@ body::before {
     transform: scale(0.5);
 }
 
-.background-stars {
+/* /start ------------------ Background Stars ------------------ */
+
+.background-stars-wrap {
     position: absolute;
     top: -50vmin;
     left: -50vmin;
@@ -39,33 +42,641 @@ body::before {
         opacity: 0.8;
     }
 }
-    
-.background-stars::before {
-    content:"";
+
+.bg-star-1 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 1.0vmin;
-    height: 1.0vmin;
+    top: 10vmin;
+    left: 10vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
     border-radius: 50%;
     box-shadow:
-        10vmin 10vmin 2vmin 1.6vmin white,
-        20vmin 20vmin 1vmin 1vmin white,
-        45vmin 7vmin 1vmin 0.25vmin white;
-
+        0vmin 0vmin 0.8vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0vmin white;
+    background-image:
+        radial-gradient(
+            circle at center,
+            white 0% 10%,
+            black 100%
+        );
 }
 
+.bg-star-2 {
+    position: absolute;
+    top: 20vmin;
+    left: 20vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 5.5vmin 1.5vmin white;
+}
+
+.bg-star-2:hover {
+    position: absolute;
+    top: 20vmin;
+    left: 20vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 5.5vmin 1.5vmin white;
+    animation: explosion 20s linear;
+}
+
+@keyframes explosion {
+    10% {
+        box-shadow: 0vmin 0vmin 10.5vmin 4.5vmin white;
+    }
+    
+    15% {
+        box-shadow: 0vmin 0vmin 40.5vmin 0.5vmin white;
+    }
+    20% {
+        box-shadow: 0vmin 0vmin 10.5vmin 15.5vmin white;
+    }
+    
+    23% {
+        box-shadow: 0vmin 0vmin 80.5vmin 7.5vmin white;
+    }
+    
+    30% {
+        box-shadow: 0vmin 0vmin 1vmin 1vmin white;
+    }
+
+    70% {
+        box-shadow: 0vmin 0vmin 40vmin 400.5vmin white;
+        z-index: 400;
+    }
+    
+    90% {
+        box-shadow: 0vmin 0vmin 80.5vmin 400.5vmin transparent;
+    }
+
+    100% {
+        box-shadow: 0vmin 0vmin 5.5vmin 1.5vmin transparent;
+        width: 0;
+        height: 0;
+    }
+}
+
+.bg-star-3 {
+    position: absolute;
+    top: 20vmin;
+    left: 120vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+}
+
+.bg-star-4 {
+    position: absolute;
+    top: 10vmin;
+    left: 100vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+}
+
+.bg-star-5 {
+    position: absolute;
+    top: 80vmin;
+    left: 20vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+}
+
+.bg-star-6 {
+    position: absolute;
+    top: 40vmin;
+    left: 70vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+}
+
+.bg-star-7 {
+    position: absolute;
+    top: 7vmin;
+    left: 200vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+}
+
+.bg-star-8 {
+    position: absolute;
+    top: 90vmin;
+    left: 140vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin 2.5vmin 0.5vmin white;
+    animation: color-flickering 0.08s linear infinite;
+}
+
+.bg-star-9 {
+    position: absolute;
+    top: 60vmin;
+    left: 100vmin;
+    width: 5vmin;
+    height: 3vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 4.0vmin 0vmin white,
+        0vmin 0vmin 8.0vmin 0vmin white,
+        0vmin 0vmin 16.0vmin 0vmin white;
+    background-image:
+        radial-gradient(
+            circle at center,
+            transparent 0% 40%,
+            black 100%
+        );
+    animation: color-flickering 0.09s linear infinite;
+}
+
+.bg-star-10 {
+    position: absolute;
+    top: 20vmin;
+    left: 170vmin;
+    width: 8vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 4.0vmin 0vmin white,
+        0vmin 0vmin 16.0vmin 0vmin white,
+        0vmin 0vmin 32.0vmin 0vmin white;
+    background-image:
+        radial-gradient(
+            circle at center,
+            transparent 0% 0.5%,
+            black 100%
+        );
+    border: 1.8vmin solid hsla(0, 100%, 100%, 0.5);
+}
+
+.bg-star-11 {
+    position: absolute;
+    top: 40vmin;
+    left: 220vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+
+/* continue modifying uniqueness from here */
+
+.bg-star-12 {
+    position: absolute;
+    top: 100vmin;
+    left: 80vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.1vmin white,
+        0vmin 0vmin 4.0vmin 0.2vmin white,
+        0vmin 0vmin 8.0vmin 0.4vmin white,
+        0vmin 0vmin 16.0vmin 0.8vmin white;
+}
+.bg-star-13 {
+    position: absolute;
+    top: 180vmin;
+    left: 120vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.1vmin white,
+        0vmin 0vmin 4.0vmin 0.2vmin white,
+        0vmin 0vmin 8.0vmin 0.4vmin white,
+        0vmin 0vmin 16.0vmin 0.8vmin white;
+}
+.bg-star-14 {
+    position: absolute;
+    top: 140vmin;
+    left: 180vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0vmin white;
+}
+.bg-star-15 {
+    position: absolute;
+    top: 140vmin;
+    left: 120vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.1vmin white,
+        0vmin 0vmin 4.0vmin 0.2vmin white,
+        0vmin 0vmin 8.0vmin 0.4vmin white;
+}
+.bg-star-16 {
+    position: absolute;
+    top: 100vmin;
+    left: 220vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-17 {
+    position: absolute;
+    top: 80vmin;
+    left: 180vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-18 {
+    position: absolute;
+    top: 40vmin;
+    left: 120vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.2vmin 0vmin white,
+        0vmin 0vmin 0.4vmin 0.1vmin white,
+        0vmin 0vmin 0.8vmin 0.2vmin white,
+        0vmin 0vmin 1.6vmin 0.2vmin white,
+        0vmin 0vmin 3.2vmin 0.4vmin white;
+}
+.bg-star-19 {
+    position: absolute;
+    top: 50vmin;
+    left: 120vmin;
+    width: 0.8vmin;
+    height: 0.8vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.2vmin 0vmin white,
+        0vmin 0vmin 0.4vmin 0.1vmin white,
+        0vmin 0vmin 0.8vmin 0.2vmin white,
+        0vmin 0vmin 1.6vmin 0.2vmin white,
+        0vmin 0vmin 3.2vmin 0.4vmin white;
+}
+.bg-star-20 {
+    position: absolute;
+    top: 82vmin;
+    left: 220vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.2vmin 0vmin white,
+        0vmin 0vmin 0.4vmin 0.1vmin white,
+        0vmin 0vmin 0.8vmin 0.2vmin white,
+        0vmin 0vmin 1.6vmin 0.2vmin white,
+        0vmin 0vmin 3.2vmin 0.4vmin white;
+}
+.bg-star-21 {
+    position: absolute;
+    top: 180vmin;
+    left: 220vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-22 {
+    position: absolute;
+    top: 190vmin;
+    left: 143vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.2vmin 0vmin white,
+        0vmin 0vmin 0.4vmin 0.1vmin white,
+        0vmin 0vmin 0.8vmin 0.2vmin white,
+        0vmin 0vmin 1.6vmin 0.2vmin white,
+        0vmin 0vmin 3.2vmin 0.4vmin white;
+}
+.bg-star-23 {
+    position: absolute;
+    top: 160vmin;
+    left: 185vmin;
+    width: 0.3vmin;
+    height: 0.3vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-24 {
+    position: absolute;
+    top: 40vmin;
+    left: 40vmin;
+    width: 0.8vmin;
+    height: 0.8vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.2vmin 0vmin white,
+        0vmin 0vmin 0.4vmin 0.02vmin white,
+        0vmin 0vmin 0.8vmin 0.04vmin white,
+        0vmin 0vmin 1.6vmin 0.08vmin white,
+        0vmin 0vmin 3.2vmin 0.16vmin white;
+}
+.bg-star-25 {
+    position: absolute;
+    top: 152vmin;
+    left: 120vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-26 {
+    position: absolute;
+    top: 28vmin;
+    left: 185vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-27 {
+    position: absolute;
+    top: 172vmin;
+    left: 220vmin;
+    width: 0.6vmin;
+    height: 0.6vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-28 {
+    position: absolute;
+    top: 110vmin;
+    left: 198vmin;
+    width: 0.1vmin;
+    height: 0.1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-29 {
+    position: absolute;
+    top: 122vmin;
+    left: 140vmin;
+    width: 0.3vmin;
+    height: 0.3vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-30 {
+    position: absolute;
+    top: 148vmin;
+    left: 210vmin;
+    width: 1.3vmin;
+    height: 1.3vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-31 {
+    position: absolute;
+    top: 140vmin;
+    left: 214vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-32 {
+    position: absolute;
+    top: 140vmin;
+    left: 10vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-33 {
+    position: absolute;
+    top: 180vmin;
+    left: 10vmin;
+    width: 1vmin;
+    height: 1vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-34 {
+    position: absolute;
+    top: 50vmin;
+    left: 22vmin;
+    width: 2vmin;
+    height: 2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white,
+        0vmin 0vmin 8.0vmin 0.5vmin white,
+        0vmin 0vmin 16.0vmin 0.6vmin white;
+}
+.bg-star-35 {
+    position: absolute;
+    top: 40vmin;
+    left: 20vmin;
+    width: 0.45vmin;
+    height: 0.45vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-36 {
+    position: absolute;
+    top: 72vmin;
+    left: 6vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+
+@keyframes color-flickering {
+    20% {
+        background-color: hsla(0, 100%, 50%, 1);
+        box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin hsla(0, 100%, 50%, 1),
+        0vmin 0vmin 4.0vmin 0vmin hsla(0, 100%, 50%, 1),
+        0vmin 0vmin 8.0vmin 0vmin hsla(0, 100%, 50%, 1),
+        0vmin 0vmin 16.0vmin 0vmin hsla(0, 100%, 50%, 1);
+    }
+    
+    40% {
+        background-color: hsla(90, 100%, 50%, 1);  
+        box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin hsla(90, 100%, 50%, 1),
+        0vmin 0vmin 4.0vmin 0vmin hsla(90, 100%, 50%, 1),
+        0vmin 0vmin 8.0vmin 0vmin hsla(90, 100%, 50%, 1),
+        0vmin 0vmin 16.0vmin 0vmin hsla(90, 100%, 50%, 1);
+    }
+
+    60% {
+        background-color: hsla(180, 100%, 50%, 1);
+        box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin hsla(180, 100%, 50%, 1),
+        0vmin 0vmin 4.0vmin 0vmin hsla(180, 100%, 50%, 1),
+        0vmin 0vmin 8.0vmin 0vmin hsla(180, 100%, 50%, 1),
+        0vmin 0vmin 16.0vmin 0vmin hsla(180, 100%, 50%, 1);
+    }
+
+    80% {
+        background-color: hsla(270, 100%, 50%, 1);
+        box-shadow:
+        0vmin 0vmin 1.0vmin 0vmin hsla(270, 100%, 50%, 1),
+        0vmin 0vmin 4.0vmin 0vmin hsla(270, 100%, 50%, 1),
+        0vmin 0vmin 8.0vmin 0vmin hsla(270, 100%, 50%, 1),
+        0vmin 0vmin 16.0vmin 0vmin hsla(270, 100%, 50%, 1);
+    }
+}
+
+/* /end ------------------ Background Stars ------------------ */
 /* /start ------------------ Falling Stars------------------ */
 
 .falling-star1 {
     position: absolute;
     top: -10vmin;
     left: 380vmin;
-    width: 1vmin;
-    height: 1vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    box-shadow:
+        0vmin 0vmin 0.5vmin 0.2vmin white,
+        0vmin 0vmin 1.0vmin 0.2vmin white,
+        0vmin 0vmin 1.5vmin 0.2vmin white;
     transform-origin: 0vmin 1000vmin;
     animation: falling-star1-anim 20s linear infinite;
 }
@@ -84,7 +695,11 @@ body::before {
     height: 1vmin;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    box-shadow:
+        0vmin 0vmin 1.0vmin 0.1vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 2.0vmin 0.2vmin white,
+        0vmin 0vmin 4.0vmin 0.4vmin white;
     transform-origin: 0vmin 1000vmin;
     animation: falling-star2-anim 15s 5s linear infinite;
 }
@@ -99,11 +714,14 @@ body::before {
     position: absolute;
     top: 250vmin;
     left: 300vmin;
-    width: 1vmin;
-    height: 1vmin;
+    width: 0.4vmin;
+    height: 0.4vmin;
     border-radius: 50%;
     background-color: white;
-    box-shadow: 0vmin 0vmin 1.0vmin 0.5vmin white;
+    box-shadow:
+        0vmin 0vmin 0.8vmin 0.05vmin white,
+        0vmin 0vmin 1.0vmin 0.09vmin white,
+        0vmin 0vmin 1.2vmin 0.1vmin white;
     transform-origin: -400vmin 500vmin;
     animation: falling-star3-anim 20s 9s linear infinite;
 }
