@@ -1,5 +1,5 @@
 :root {
-    --black: black;
+    --black: hsl(0, 0%, 0%);
 }
 
 body {
@@ -34,12 +34,12 @@ body {
     position: absolute;
     top: -50vmin;
     left: -50vmin;
-    animation: flickering 0.1s linear infinite;
+    animation: flickering 2.1s linear infinite;
 }
 
 @keyframes flickering {
     50% {
-        opacity: 0.8;
+        opacity: 0.83;
     }
 }
 
@@ -52,14 +52,9 @@ body {
     background-color: white;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 0.8vmin 0vmin white,
-        0vmin 0vmin 2.0vmin 0vmin white;
-    background-image:
-        radial-gradient(
-            circle at center,
-            white 0% 10%,
-            black 100%
-        );
+        0vmin 0vmin 0.8vmin 0.05vmin white,
+        0vmin 0vmin 2.0vmin 0.05vmin white;
+           
 }
 
 .bg-star-2 {
@@ -82,7 +77,7 @@ body {
     background-color: white;
     border-radius: 50%;
     box-shadow: 0vmin 0vmin 5.5vmin 1.5vmin white;
-    animation: explosion 20s linear;
+    animation: explosion 10s linear;
 }
 
 @keyframes explosion {
@@ -93,6 +88,7 @@ body {
     15% {
         box-shadow: 0vmin 0vmin 40.5vmin 0.5vmin white;
     }
+    
     20% {
         box-shadow: 0vmin 0vmin 10.5vmin 15.5vmin white;
     }
@@ -112,12 +108,12 @@ body {
     
     90% {
         box-shadow: 0vmin 0vmin 80.5vmin 400.5vmin transparent;
+        z-index: 400;
     }
 
     100% {
         box-shadow: 0vmin 0vmin 5.5vmin 1.5vmin transparent;
-        width: 0;
-        height: 0;
+        z-index: 400;
     }
 }
 
@@ -219,10 +215,9 @@ body {
     background-color: white;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 1.0vmin 0vmin white,
-        0vmin 0vmin 4.0vmin 0vmin white,
-        0vmin 0vmin 16.0vmin 0vmin white,
-        0vmin 0vmin 32.0vmin 0vmin white;
+        0vmin 0vmin 1.0vmin 0vmin green,
+        0vmin 0vmin 4.0vmin 0vmin purple,
+        0vmin 0vmin 16.0vmin 0vmin blue;
     background-image:
         radial-gradient(
             circle at center,
@@ -244,11 +239,8 @@ body {
         0vmin 0vmin 1.0vmin 0vmin white,
         0vmin 0vmin 2.0vmin 0.2vmin white,
         0vmin 0vmin 4.0vmin 0.4vmin white,
-        0vmin 0vmin 8.0vmin 0.5vmin white,
-        0vmin 0vmin 16.0vmin 0.6vmin white;
+        0vmin 0vmin 8.0vmin 0.5vmin white;
 }
-
-/* continue modifying uniqueness from here */
 
 .bg-star-12 {
     position: absolute;
@@ -256,14 +248,14 @@ body {
     left: 80vmin;
     width: 1vmin;
     height: 1vmin;
-    background-color: white;
+    background-color: purple;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 1.0vmin 0vmin white,
-        0vmin 0vmin 2.0vmin 0.1vmin white,
-        0vmin 0vmin 4.0vmin 0.2vmin white,
-        0vmin 0vmin 8.0vmin 0.4vmin white,
-        0vmin 0vmin 16.0vmin 0.8vmin white;
+        0vmin 0vmin 1.0vmin 0vmin purple,
+        0vmin 0vmin 2.0vmin 0.1vmin purple,
+        0vmin 0vmin 4.0vmin 0.2vmin purple,
+        0vmin 0vmin 8.0vmin 0.4vmin purple,
+        0vmin 0vmin 16.0vmin 0.8vmin purple;
 }
 .bg-star-13 {
     position: absolute;
@@ -335,8 +327,7 @@ body {
         0vmin 0vmin 1.0vmin 0vmin white,
         0vmin 0vmin 2.0vmin 0.2vmin white,
         0vmin 0vmin 4.0vmin 0.4vmin white,
-        0vmin 0vmin 8.0vmin 0.5vmin white,
-        0vmin 0vmin 16.0vmin 0.6vmin white;
+        0vmin 0vmin 8.0vmin 0.5vmin white;
 }
 .bg-star-18 {
     position: absolute;
@@ -344,14 +335,14 @@ body {
     left: 120vmin;
     width: 0.2vmin;
     height: 0.2vmin;
-    background-color: white;
+    background-color: red;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 0.2vmin 0vmin white,
-        0vmin 0vmin 0.4vmin 0.1vmin white,
-        0vmin 0vmin 0.8vmin 0.2vmin white,
-        0vmin 0vmin 1.6vmin 0.2vmin white,
-        0vmin 0vmin 3.2vmin 0.4vmin white;
+        0vmin 0vmin 0.2vmin 0vmin red,
+        0vmin 0vmin 0.4vmin 0.1vmin red,
+        0vmin 0vmin 0.8vmin 0.2vmin red,
+        0vmin 0vmin 1.6vmin 0.2vmin red,
+        0vmin 0vmin 3.2vmin 0.4vmin red;
 }
 .bg-star-19 {
     position: absolute;
@@ -389,14 +380,14 @@ body {
     left: 220vmin;
     width: 2vmin;
     height: 2vmin;
-    background-color: white;
+    background-color: blue;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 1.0vmin 0vmin white,
-        0vmin 0vmin 2.0vmin 0.2vmin white,
-        0vmin 0vmin 4.0vmin 0.4vmin white,
-        0vmin 0vmin 8.0vmin 0.5vmin white,
-        0vmin 0vmin 16.0vmin 0.6vmin white;
+        0vmin 0vmin 1.0vmin 0vmin blue,
+        0vmin 0vmin 2.0vmin 0.2vmin blue,
+        0vmin 0vmin 4.0vmin 0.4vmin blue,
+        0vmin 0vmin 8.0vmin 0.5vmin blue,
+        0vmin 0vmin 16.0vmin 0.6vmin blue;
 }
 .bg-star-22 {
     position: absolute;
@@ -404,14 +395,15 @@ body {
     left: 143vmin;
     width: 2vmin;
     height: 2vmin;
-    background-color: white;
+    background-color: rgb(0, 38, 255);
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 0.2vmin 0vmin white,
-        0vmin 0vmin 0.4vmin 0.1vmin white,
-        0vmin 0vmin 0.8vmin 0.2vmin white,
-        0vmin 0vmin 1.6vmin 0.2vmin white,
-        0vmin 0vmin 3.2vmin 0.4vmin white;
+        0vmin 0vmin 0.2vmin 0vmin rgb(0, 38, 255),
+        0vmin 0vmin 0.4vmin 0.1vmin blue,
+        0vmin 0vmin 0.8vmin 0.2vmin royalblue,
+        0vmin 0vmin 1.6vmin 0.2vmin royalblue,
+        0vmin 0vmin 10.4vmin 0.4vmin royalblue,
+        0vmin 0vmin 12.8vmin 0.4vmin royalblue;
 }
 .bg-star-23 {
     position: absolute;
@@ -509,14 +501,14 @@ body {
     left: 140vmin;
     width: 0.3vmin;
     height: 0.3vmin;
-    background-color: white;
+    background-color: red;
     border-radius: 50%;
     box-shadow:
-        0vmin 0vmin 1.0vmin 0vmin white,
-        0vmin 0vmin 2.0vmin 0.2vmin white,
-        0vmin 0vmin 4.0vmin 0.4vmin white,
-        0vmin 0vmin 8.0vmin 0.5vmin white,
-        0vmin 0vmin 16.0vmin 0.6vmin white;
+        0vmin 0vmin 1.0vmin 0vmin red,
+        0vmin 0vmin 2.0vmin 0.2vmin red,
+        0vmin 0vmin 4.0vmin 0.4vmin red,
+        0vmin 0vmin 8.0vmin 0.5vmin red,
+        0vmin 0vmin 16.0vmin 0.6vmin red;
 }
 .bg-star-30 {
     position: absolute;
@@ -612,6 +604,966 @@ body {
     position: absolute;
     top: 72vmin;
     left: 6vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-37 {
+    position: absolute;
+    top: 72vmin;
+    left: 260vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-38 {
+    position: absolute;
+    top: 42vmin;
+    left: 160vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-39 {
+    position: absolute;
+    top: 72vmin;
+    left: 150vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-40 {
+    position: absolute;
+    top: 62vmin;
+    left: 120vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-41 {
+    position: absolute;
+    top: 67vmin;
+    left: 130vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-42 {
+    position: absolute;
+    top: 47vmin;
+    left: 170vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-43 {
+    position: absolute;
+    top: 70vmin;
+    left: 180vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-44 {
+    position: absolute;
+    top: 72vmin;
+    left: 190vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-45 {
+    position: absolute;
+    top: 67vmin;
+    left: 200vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-46 {
+    position: absolute;
+    top: 41vmin;
+    left: 210vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-47 {
+    position: absolute;
+    top: 117vmin;
+    left: 240vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-48 {
+    position: absolute;
+    top: 124vmin;
+    left: 154vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-49 {
+    position: absolute;
+    top: 121vmin;
+    left: 208vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-50 {
+    position: absolute;
+    top: 31vmin;
+    left: 240vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-51 {
+    position: absolute;
+    top: 72vmin;
+    left: 182vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-52 {
+    position: absolute;
+    top: 12vmin;
+    left: 147vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-53 {
+    position: absolute;
+    top: 62vmin;
+    left: 154vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-54 {
+    position: absolute;
+    top: 92vmin;
+    left: 133vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-55 {
+    position: absolute;
+    top: 42vmin;
+    left: 128vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-56 {
+    position: absolute;
+    top: 67vmin;
+    left: 44vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-57 {
+    position: absolute;
+    top: 12vmin;
+    left: 6vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-58 {
+    position: absolute;
+    top: 8vmin;
+    left: 4vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-59 {
+    position: absolute;
+    top: 172vmin;
+    left: 6vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-60 {
+    position: absolute;
+    top: 58vmin;
+    left: 12vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-61 {
+    position: absolute;
+    top: 32vmin;
+    left: 36vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-62 {
+    position: absolute;
+    top: 72vmin;
+    left: 8vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-63 {
+    position: absolute;
+    top: 77vmin;
+    left: 16vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-64 {
+    position: absolute;
+    top: 49vmin;
+    left: 56vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-65 {
+    position: absolute;
+    top: 72vmin;
+    left: 86vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-66 {
+    position: absolute;
+    top: 27vmin;
+    left: 96vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-67 {
+    position: absolute;
+    top: 97vmin;
+    left: 46vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-68 {
+    position: absolute;
+    top: 7vmin;
+    left: 126vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-69 {
+    position: absolute;
+    top: 6vmin;
+    left: 56vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-70 {
+    position: absolute;
+    top: 2vmin;
+    left: 59vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-71 {
+    position: absolute;
+    top: 14vmin;
+    left: 67vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-72 {
+    position: absolute;
+    top: 27vmin;
+    left: 71vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-73 {
+    position: absolute;
+    top: 21vmin;
+    left: 63vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-74 {
+    position: absolute;
+    top: 25vmin;
+    left: 56vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-75 {
+    position: absolute;
+    top: 29vmin;
+    left: 61vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-76 {
+    position: absolute;
+    top: 12vmin;
+    left: 36vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-77 {
+    position: absolute;
+    top: 3vmin;
+    left: 24vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-78 {
+    position: absolute;
+    top: 4vmin;
+    left: 13vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-79 {
+    position: absolute;
+    top: 66vmin;
+    left: 19vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-80 {
+    position: absolute;
+    top: 7vmin;
+    left: 2vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-81 {
+    position: absolute;
+    top: 59vmin;
+    left: 74vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-82 {
+    position: absolute;
+    top: 54vmin;
+    left: 78vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-83 {
+    position: absolute;
+    top: 61vmin;
+    left: 71vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-84 {
+    position: absolute;
+    top: 72vmin;
+    left: 56vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-85 {
+    position: absolute;
+    top: 54vmin;
+    left: 51vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-86 {
+    position: absolute;
+    top: 110vmin;
+    left: 86vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-87 {
+    position: absolute;
+    top: 121vmin;
+    left: 106vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-88 {
+    position: absolute;
+    top: 112vmin;
+    left: 66vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-89 {
+    position: absolute;
+    top: 124vmin;
+    left: 96vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-90 {
+    position: absolute;
+    top: 111vmin;
+    left: 101vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-91 {
+    position: absolute;
+    top: 19vmin;
+    left: 306vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-92 {
+    position: absolute;
+    top: 2vmin;
+    left: 316vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-93 {
+    position: absolute;
+    top: 172vmin;
+    left: 336vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-94 {
+    position: absolute;
+    top: 112vmin;
+    left: 292vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-95 {
+    position: absolute;
+    top: 4vmin;
+    left: 279vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-96 {
+    position: absolute;
+    top: 52vmin;
+    left: 299vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-97 {
+    position: absolute;
+    top: 98vmin;
+    left: 283vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-98 {
+    position: absolute;
+    top: 91vmin;
+    left: 312vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-99 {
+    position: absolute;
+    top: 42vmin;
+    left: 370vmin;
+    width: 0.2vmin;
+    height: 0.2vmin;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow:
+        0vmin 0vmin 0.1vmin 0vmin white,
+        0vmin 0vmin 0.2vmin 0.02vmin white,
+        0vmin 0vmin 0.4vmin 0.04vmin white,
+        0vmin 0vmin 0.8vmin 0.08vmin white,
+        0vmin 0vmin 1.6vmin 0.16vmin white;
+}
+.bg-star-100 {
+    position: absolute;
+    top: 109vmin;
+    left: 381vmin;
     width: 0.2vmin;
     height: 0.2vmin;
     background-color: white;
@@ -733,12 +1685,19 @@ body {
 }
 
 /* /end ------------------ Falling Stars ------------------ */
+/* /start ------------------ Star System ------------------ */
+.star-system-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.7);
+}
 
 .orbits-wrap {
     position: absolute;
     width: 60vmin;
     height: 60vmin;
-    bottom: -3vmin;
+    bottom: -100vmin;
     left: -80vmin;
     transform: rotateX(75deg);
 }
@@ -881,7 +1840,7 @@ body {
 .p2-wrap {
     top: 200vmin;
     left: 102vmin;
-    animation: p2-wrap-anim 5s linear infinite;
+    animation: p2-wrap-anim 25s linear infinite;
 
 }
 
@@ -900,7 +1859,7 @@ body {
     height: 32vmin;
     border-radius: 50%;
     transform-origin: 2vmin 118vmin;
-    animation: planet2-anim 5s linear infinite;
+    animation: planet2-anim 25s linear infinite;
 
 }
 
@@ -912,8 +1871,8 @@ body {
 
 .p3-wrap {
     top: 283vmin;
-    left: 132vmin;
-    animation: p3-wrap-anim 3s linear infinite;
+    left: 130vmin;
+    animation: p3-wrap-anim 5s linear infinite;
 }
 
 @keyframes p3-wrap-anim {
@@ -930,7 +1889,7 @@ body {
     background-color: green;
     width: 8vmin;
     height: 32vmin;
-    animation: planet3-anim 3s linear infinite;
+    animation: planet3-anim 5s linear infinite;
 
 }
 
@@ -1002,7 +1961,7 @@ body {
 
 .p6-wrap {
     top: 600vmin;
-    left: 300vmin;
+    left: 297vmin;
     animation: p4-wrap-anim 21s linear infinite;
 }
 
@@ -1029,3 +1988,5 @@ body {
         transform: translate(-50%, -50%) rotate(1turn);
     }
 }
+
+/* /end ------------------ Star System ------------------ */
