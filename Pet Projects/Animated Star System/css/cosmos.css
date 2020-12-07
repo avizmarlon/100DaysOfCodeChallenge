@@ -1621,20 +1621,33 @@ body {
     position: absolute;
     top: -10vmin;
     left: 380vmin;
-    width: 0.2vmin;
+    width: 20.2vmin;
     height: 0.2vmin;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: white;
     box-shadow:
         0vmin 0vmin 0.5vmin 0.2vmin white,
         0vmin 0vmin 1.0vmin 0.2vmin white,
         0vmin 0vmin 1.5vmin 0.2vmin white;
     transform-origin: 0vmin 1000vmin;
-    animation: falling-star1-anim 20s linear infinite;
+    animation: falling-star1-anim 13s linear infinite;
 }
 
 @keyframes falling-star1-anim {
-    100% {
+    1%, 1.6%, 2.2%, 2.8%, 3.4%, 4%, 4.6%, 5.2%, 5.8%, 6.4% {
+        box-shadow:
+            0vmin 0vmin 23.5vmin 6vmin white,
+            0vmin 0vmin 24.0vmin 6vmin white,
+            0vmin 0vmin 25.5vmin 6vmin white;
+    }
+    1.3%, 1.9%, 2.5%, 3.1%, 3.7%, 4.3%, 4.9%, 5.5%, 6.1%, 6.7% {
+        box-shadow:
+            0vmin 0vmin 0.5vmin 0vmin white,
+            0vmin 0vmin 1.0vmin 0vmin white,
+            0vmin 0vmin 1.5vmin 0vmin white;
+        
+    }
+    50% {
         transform: rotate(-0.5turn);
     }
 }
@@ -1643,44 +1656,51 @@ body {
     position: absolute;
     top: -10vmin;
     left: -380vmin;
-    width: 1vmin;
+    width: 30vmin;
     height: 1vmin;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: white;
     box-shadow:
         0vmin 0vmin 1.0vmin 0.1vmin white,
-        0vmin 0vmin 2.0vmin 0.2vmin white,
-        0vmin 0vmin 2.0vmin 0.2vmin white,
-        0vmin 0vmin 4.0vmin 0.4vmin white;
+        0vmin 0vmin 1.5vmin 0.2vmin white,
+        0vmin 0vmin 2.25vmin 0.2vmin white,
+        0vmin 0vmin 5.0vmin 0.4vmin white;
     transform-origin: 0vmin 1000vmin;
-    animation: falling-star2-anim 15s 5s linear infinite;
+    animation: falling-star2-anim 15s 7.5s linear infinite;
 }
 
 @keyframes falling-star2-anim {
-    100% {
+    50% {
         transform: rotate(0.5turn);
+    }
+    100% {
+        transform: rotate(-0.5turn);
+        transform-origin: 200vmin 1000vmin;
     }
 }
 
 .falling-star3 {
     position: absolute;
-    top: 250vmin;
-    left: 300vmin;
-    width: 0.4vmin;
+    top: 0vmin;
+    left: 400vmin;
+    width: 20.4vmin;
     height: 0.4vmin;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: white;
     box-shadow:
         0vmin 0vmin 0.8vmin 0.05vmin white,
         0vmin 0vmin 1.0vmin 0.09vmin white,
         0vmin 0vmin 1.2vmin 0.1vmin white;
-    transform-origin: -400vmin 500vmin;
-    animation: falling-star3-anim 20s 9s linear infinite;
+    transform-origin: 0vmin 800vmin;
+    animation: falling-star3-anim 14s 4s linear infinite;
 }
 
 @keyframes falling-star3-anim {
-    100% {
+    50% {
         transform: rotate(-0.5turn);
+    }
+    100% {
+        transform: rotate(0.5turn);
     }
 }
 
@@ -1715,7 +1735,7 @@ body {
     left: 0vmin;
     width: 164vmin;
     height: 164vmin;
-    border-color: red;
+    border-color: hsl(0, 100%, 25%);
 }
 .orbit-line-2 {
     z-index: 5;
@@ -1723,7 +1743,7 @@ body {
     left: -20vmin;
     width: 205vmin;
     height: 205vmin;
-    border-color: blue;    
+    border-color: hsl(12, 100%, 50%);    
 }
 .orbit-line-3 {
     z-index: 4;
@@ -1731,7 +1751,7 @@ body {
     left: -60vmin;
     width: 285vmin;
     height: 285vmin;
-    border-color: green;    
+    border-color: hsl(34, 100%, 50%);    
 
 }
 .orbit-line-4 {
@@ -1740,7 +1760,7 @@ body {
     left: -125vmin;
     width: 420vmin;
     height: 420vmin;
-    border-color: purple;
+    border-color: hsl(56, 100%, 44%);
 
 }
 .orbit-line-5 {
@@ -1749,7 +1769,7 @@ body {
     left: -165vmin;
     width: 500vmin;
     height: 500vmin;
-    border-color: white;
+    border-color: hsl(177, 98%, 63%);
 }
 .orbit-line-6 {
     z-index: 1;
@@ -1757,7 +1777,7 @@ body {
     left: -220vmin;
     width: 600vmin;
     height: 600vmin;
-    border-color: hsl(184, 100%, 50%);
+    border-color: hsl(187, 100%, 98%);
 
 }
 
@@ -1826,9 +1846,33 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: 1.5vmin 97vmin; /* original: 4vmin 86vmin */
-    background-color: hsla(12, 100%, 50%, 1);
+    background-color: hsl(12, 100%, 35%);
     animation: planet1-anim 10s linear infinite;
-    box-shadow: 0vmin 0vmin 0.5vmin 0.5vmin hsl(12, 100%, 60%, 0.8);
+    background-image: 
+        linear-gradient(
+            60deg,
+            hsl(14, 97%, 59%),
+            transparent,
+            hsl(0, 54%, 25%),
+            transparent,
+            hsl(9, 85%, 16%)
+        ),
+        linear-gradient(
+            60deg,
+            hsl(17, 99%, 31%),
+            transparent,
+            hsl(345, 40%, 44%),
+            transparent,
+            hsl(20, 95%, 34%)
+        ),
+        linear-gradient(
+            60deg,
+            hsl(15, 100%, 27%),
+            transparent,
+            hsl(9, 84%, 25%),
+            transparent,
+            hsl(4, 100%, 25%)
+        );
 }
 
 @keyframes planet1-anim {
@@ -1854,13 +1898,62 @@ body {
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: blue;
+    background-color: rgb(92, 55, 0);
     width: 8vmin;
     height: 32vmin;
     border-radius: 50%;
     transform-origin: 2vmin 118vmin;
     animation: planet2-anim 25s linear infinite;
+    background-image: 
+        radial-gradient(
+            circle at top center,
+            hsl(27, 41%, 43%),
+            transparent,
+            hsl(49, 100%, 50%)
+        ),
+        radial-gradient(
+            circle at bottom center,
+            hsl(244, 93%, 41%),
+            transparent,
+            hsl(41, 46%, 49%)
+        );
 
+}
+
+/* planet2 disk 1*/
+.planet2::before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    border: double hsl(38, 16%, 51%);
+    border-top-width: 3vmin;
+    border-left-width: 2vmin;
+    border-bottom-width: 6vmin;
+    border-right-width: 2vmin;
+    padding: 10vmin 0vmin;
+}
+
+/* planet2 disk 2*/
+.planet2::after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    border: double hsl(40, 20%, 18%);
+    border-top-width: 3vmin;
+    border-left-width: 2vmin;
+    border-bottom-width: 6vmin;
+    border-right-width: 2vmin;
+    padding: 10vmin 0vmin;
 }
 
 @keyframes planet2-anim {
@@ -1886,11 +1979,30 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: -10.5vmin 158vmin;
-    background-color: green;
+    background-color: hsl(226, 99%, 29%);
     width: 8vmin;
     height: 32vmin;
     animation: planet3-anim 5s linear infinite;
-
+    background-image: 
+        linear-gradient(
+            170deg,
+            hsl(198, 26%, 15%) 0% 10%,
+            transparent 20% 40%,
+            hsl(172, 43%, 36%) 50% 60%,
+            transparent 70% 100%
+        ),
+        linear-gradient(
+            0deg,
+            hsl(231, 56%, 52%) 0% 10%,
+            transparent 20% 40%,
+            hsl(160, 29%, 53%) 50% 60%,
+            transparent 70% 100%
+        ),
+        linear-gradient(
+            90deg,
+            hsl(167, 85%, 23%),
+            hsl(240, 51%, 20%)
+        );
 }
 
 @keyframes planet3-anim {
@@ -1920,6 +2032,12 @@ body {
     width: 8vmin;
     height: 32vmin;
     animation: planet4-anim 15s linear infinite;
+    background-image: 
+        linear-gradient(
+            90deg,
+            hsl(0, 63%, 58%),
+            hsl(271, 50%, 68%)
+        );
 
 }
 
@@ -1946,10 +2064,17 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: -5vmin 265vmin;
-    background-color: white;
+    background-color: hsl(167, 48%, 73%);
     width: 8vmin;
     height: 32vmin;
     animation: planet4-anim 7s linear infinite;
+    background-image: 
+        repeating-radial-gradient(
+            circle at center,
+            hsla(226, 82%, 70%, 0.884) 0% 10%,
+            transparent 20% 40%,
+            hsla(24, 24%, 37%, 0.932) 45% 55%
+        );
 
 }
 
@@ -1976,11 +2101,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: 0vmin 317vmin;
-    background-color: hsl(184, 100%, 50%);
+    background-color: hsl(38, 100%, 78%);
     width: 8vmin;
     height: 32vmin;
     animation: planet4-anim 21s linear infinite;
-
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            hsl(44, 92%, 52%) 0% 2%,
+            hsl(34, 24%, 62%) 2% 10%,
+            hsl(22, 42%, 63%) 10% 15%,
+            hsl(28, 21%, 55%) 15% 20%,
+            hsl(38, 96%, 79%) 20% 30%
+        );
 }
 
 @keyframes planet6-anim {

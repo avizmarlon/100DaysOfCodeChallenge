@@ -18,13 +18,6 @@
 
 - [ ] Create different loading animations
 
-- [ ] Animated star system using any number of those along other properties and techniques:
-  - box-shadow
-  - pseudo elements
-  - nested divs
-  - keyframes
-  - animation
-
 - [ ] Make an eclipse-looking figure
 
 ## Things that might need reinforcement
@@ -42,3 +35,11 @@
 - [x] Read more on pseudo-elements
 
 - [x] Reduce redundant css rules, in order to practice usage of multiple css selectors that use the same css rule. Try using all kinds of selectors (element, class, id, attribute, compound, and a combination of those)
+
+- [x] Animated star system using any number of those along other properties and techniques:
+  - box-shadow
+  - pseudo elements
+  - nested divs
+  - keyframes
+  - animation
+  
