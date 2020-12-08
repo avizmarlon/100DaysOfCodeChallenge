@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
 	--white: #FFF;
 	--dark-purple: #710EBC;
 	--purple: #A938FF;
+	--default-animation-duration: 4.5s;
 }
 
 body {
@@ -118,12 +123,12 @@ body {
 	font-size: 0;
 }
 
-.gradient-wrappers {
+.gradient-wrapper {
 	position: relative;
 	display: inline-block;
 }
 
-.gradient-wrappers div[class*="gradient"] {
+.gradient-wrapper div[class*="gradient"] {
 	margin: 10px 5px 10px 5px;
 	border: 1px solid black;
 	border-radius: 12px;
@@ -136,7 +141,7 @@ body {
 	8px 8px 8px rgba(0, 0, 0, 0.42)
 }
 
-.gradient-wrappers div[class*="gradient"]:hover {
+.gradient-wrapper div[class*="gradient"]:hover {
 	animation: hover-scale 1s linear infinite;
 }
 
@@ -728,4 +733,161 @@ div p.vertical-text { /* Melon */
 			hsla(300, 100%, 25%, 1),
 			hsla(39, 100%, 50%, 1) 
 		);
+}
+
+/* start ----------- Loading Animations ----------- */
+
+.loadingAnimations-wrapper-main {
+	position: relative;
+	font-size: initial;
+	min-width: 850px;
+	text-align: center;
+}
+
+.loadingAnimations-wrapper-left,
+.loadingAnimations-wrapper-right {
+	min-width: 400px;
+	position: relative;
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+}
+
+div[class*="loadingAnimationContainer"] {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	border-radius: 10%;
+	box-shadow: 
+		2px 2px 2px hsla(0, 100%, 0%, 0.38),
+		4px 4px 4px hsla(0, 100%, 0%, 0.38),
+		6px 6px 6px hsla(0, 100%, 0%, 0.38),
+		8px 8px 8px hsla(0, 100%, 0%, 0.38);
+	overflow: hidden;
+}
+
+.cartoonStar-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-image:
+        linear-gradient(
+            25deg,
+            hsl(270, 100%, 50%),
+            hsl(135, 100%, 50%)
+        );
+}
+
+.rotating-wrap {
+    animation: full-rotation var(--default-animation-duration) linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transform-origin: 0vmin 5vmin;
+}
+
+@keyframes full-rotation {
+    70% {
+        transform: rotate(0turn) translate(-50%, -50%);
+    }
+
+    80% {
+        transform: rotate(1turn) translate(-50%, -50%);
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: hsla(54, 92%, 53%, 1);
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 25%;
+    box-shadow: 
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 1vmin 1.0vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 2vmin 1.0vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 4vmin 1.0vmin hsla(54, 92%, 53%, 1);
+    animation: lights var(--default-animation-duration) ease-out infinite;
+}
+
+[class*="thin-rounded-rectangle"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    background-color: hsl(54, 92%, 53%);
+    width: 0.5vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    box-shadow: 
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 1vmin 1.0vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 2vmin 1.0vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 4vmin 1.0vmin hsl(54, 92%, 53%);
+    animation: lights var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes lights {
+    50% {
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.1vmin 0.1vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1);
+    }
+}
+
+.thin-rounded-rectangle-1 {
+    height: 10vmin;
+    transform: translate(-50%, -50%);
+}
+
+.thin-rounded-rectangle-2 {
+    transform: translate(-50%, -25%) rotate(52deg);
+    animation: rotation-rectangle2 var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes rotation-rectangle2 {
+    25% {
+        transform: translate(-50%, -25%) rotate(1.0turn);
+    }
+
+    50% {
+        transform: translate(-50%, -25%) rotate(52deg);
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.1vmin 0.1vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%);
+    }
+}
+
+.thin-rounded-rectangle-3 {
+    transform: translate(-50%, -25%) rotate(-52deg);
+    animation: rotation-rectangle3 var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes rotation-rectangle3 {
+    25% {
+        transform: translate(-50%, -25%) rotate(-2.0turn);
+    }
+
+    50% {
+        transform: translate(-50%, -25%) rotate(-52deg);
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.1vmin 0.1vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%);
+    }
 }

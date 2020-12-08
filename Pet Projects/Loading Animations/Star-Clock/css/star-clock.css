@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --default-animation-duration: 4.5s;
+}
+
+body {
+    overflow: hidden;
+}
+
+.cartoonStar-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    background-image:
+        linear-gradient(
+            25deg,
+            hsl(270, 100%, 50%),
+            hsl(135, 100%, 50%)
+        );
+}
+
+.rotating-wrap {
+    animation: full-rotation var(--default-animation-duration) linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transform-origin: 0vmin 5vmin;
+}
+
+@keyframes full-rotation {
+    70% {
+        transform: rotate(0turn) translate(-50%, -50%);
+    }
+
+    80% {
+        transform: rotate(1turn) translate(-50%, -50%);
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: hsla(54, 92%, 53%, 1);
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 25%;
+    box-shadow: 
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 1vmin 1.0vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 2vmin 1.0vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 4vmin 1.0vmin hsla(54, 92%, 53%, 1);
+    animation: lights var(--default-animation-duration) ease-out infinite;
+}
+
+[class*="thin-rounded-rectangle"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    background-color: hsl(54, 92%, 53%);
+    width: 0.5vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    box-shadow: 
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 1vmin 1.0vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 2vmin 1.0vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 4vmin 1.0vmin hsl(54, 92%, 53%);
+    animation: lights var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes lights {
+    50% {
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.1vmin 0.1vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1),
+        0vmin 0vmin 0.5vmin 0.5vmin hsla(54, 92%, 53%, 1);
+    }
+}
+
+.thin-rounded-rectangle-1 {
+    height: 10vmin;
+    transform: translate(-50%, -50%);
+}
+
+.thin-rounded-rectangle-2 {
+    transform: translate(-50%, -25%) rotate(52deg);
+    animation: rotation-rectangle2 var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes rotation-rectangle2 {
+    25% {
+        transform: translate(-50%, -25%) rotate(1.0turn);
+    }
+
+    50% {
+        transform: translate(-50%, -25%) rotate(52deg);
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.1vmin 0.1vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%);
+    }
+}
+
+.thin-rounded-rectangle-3 {
+    transform: translate(-50%, -25%) rotate(-52deg);
+    animation: rotation-rectangle3 var(--default-animation-duration) ease-out infinite;
+}
+
+@keyframes rotation-rectangle3 {
+    25% {
+        transform: translate(-50%, -25%) rotate(-2.0turn);
+    }
+
+    50% {
+        transform: translate(-50%, -25%) rotate(-52deg);
+        box-shadow: 
+        0vmin 0vmin 0.05vmin 0.05vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.1vmin 0.1vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%),
+        0vmin 0vmin 0.5vmin 0.5vmin hsl(54, 92%, 53%);
+    }
+}
