@@ -18,7 +18,7 @@ To pick black, choose any hue value and any saturation value, but use 0% as the 
 
 To use different tones of gray, use any hue value; 0% for saturation and adjust the lightness color to get the gray tone you want.
 
-Adjusting the lightness level to a vlaue greater than 50% allows you to make a shade of the hue (color) by adding black to it; adjusting it to a value less than 50% allows you to make a tint of the color, by adding white to it.
+Adjusting the lightness level to a value greater than 50% allows you to make a tint of the hue (color) by adding black to it; adjusting it to a value less than 50% allows you to make a shade of the color, by adding white to it.
 
 Making a tone of the color can be done adjusting the saturation value. The smaller the saturation value, the more gray the color will have.
 

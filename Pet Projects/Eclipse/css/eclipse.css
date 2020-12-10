@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.sky {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(215, 63%, 50%);
+    animation: sky-color 10s ease-in-out infinite;
+}
+
+@keyframes sky-color {
+    22% {
+        background-color: hsl(215, 63%, 50%);
+    }
+
+    48%, 60% {
+        background-color: hsl(215, 63%, 4%);
+    }
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsla(46, 100%, 98%, 1.0);
+    width: 41vmin;
+    height: 41vmin;
+    border-radius: 50%;
+    box-shadow: 
+        0vmin 0vmin 1.5vmin 1.5vmin hsla(46, 100%, 98%, 1.0),
+        0vmin 0vmin 3.0vmin 3.0vmin hsla(0, 0%, 100%, 0.85),
+        0vmin 0vmin 6.0vmin 6.0vmin hsla(0, 0%, 100%, 0.75),
+        0vmin 0vmin 12.0vmin 12.0vmin hsla(0, 0%, 100%, 0.65),
+        0vmin 0vmin 24.0vmin 24.0vmin hsla(0, 0%, 100%, 0.15),
+        0vmin 0vmin 48.0vmin 48.0vmin hsla(0, 0%, 100%, 0.15);
+    animation: sun-lights 10s ease-in-out infinite;
+}
+
+@keyframes sun-lights {
+    22% {
+        box-shadow: 
+        0vmin 0vmin 1.5vmin 1.5vmin hsla(46, 100%, 98%, 1.0),
+        0vmin 0vmin 3.0vmin 3.0vmin hsla(0, 0%, 100%, 0.85),
+        0vmin 0vmin 6.0vmin 6.0vmin hsla(0, 0%, 100%, 0.75),
+        0vmin 0vmin 12.0vmin 12.0vmin hsla(0, 0%, 100%, 0.65),
+        0vmin 0vmin 24.0vmin 24.0vmin hsla(0, 0%, 100%, 0.15),
+        0vmin 0vmin 48.0vmin 48.0vmin hsla(0, 0%, 100%, 0.15);
+    }
+    48%, 59% {
+        box-shadow: 
+        0vmin 0vmin 0.2vmin 0.2vmin hsla(46, 100%, 98%, 1.0),
+        0vmin 0vmin 0.4vmin 0.4vmin hsla(0, 0%, 100%, 0.85),
+        0vmin 0vmin 0.8vmin 0.8vmin hsla(0, 0%, 100%, 0.75),
+        0vmin 0vmin 1.6vmin 1.6vmin hsla(0, 0%, 100%, 0.65),
+        0vmin 0vmin 3.2vmin 3.2vmin hsla(0, 0%, 100%, 0.15);
+    }
+}
+
+.moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(100vmin, -50%);
+    background-color: hsl(0, 0%, 30%);
+    width: 39vmin;
+    height: 39vmin;
+    border-radius: 50%;
+    animation: moon-movement 10s ease-in-out infinite;
+}
+
+@keyframes moon-movement {
+    50%, 60% {
+        transform: translate(-50%, -50%);
+        background-color: hsl(0, 0%, 2%);
+    }
+    100% {
+        transform: translate(-400%, -50%);
+        background-color: hsl(0, 0%, 30%);
+    }
+}

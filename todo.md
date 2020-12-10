@@ -18,13 +18,13 @@
 
 - [ ] Create different loading animations
 
-- [ ] Make an eclipse-looking figure
-
 ## Things that might need reinforcement
 
 - [ ] `value` attribute on form elements (think checkboxes, radio buttons, and other types of input)
 
 ## Done
+
+- [x] Make an eclipse animation
 
 - [x] Create a grid layout (maybe on the soundboard pet project) to practice usage of css positioning (position, float, clear and their values)
 
