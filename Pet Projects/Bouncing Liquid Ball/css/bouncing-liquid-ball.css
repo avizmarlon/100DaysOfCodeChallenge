@@ -3,8 +3,9 @@
 }
 
 :root {
-    --sky-blue: hsl(197, 100%, 50%);
-    --sweet-green: hsl(103, 100%, 49%);
+    --color1: hsl(197, 100%, 70%);
+    --color2: hsl(197, 100%, 20%);
+    --anim-dur: 3s;
 }
 
 body {
@@ -24,15 +25,25 @@ body {
     top: 25vmin;
     margin: 0vmin auto;
     background:
-        linear-gradient(
-            -25deg,
-            var(--sky-blue),
-            var(--sweet-green)
+        radial-gradient(
+            circle at center,
+            transparent 0% 70%,
+            black 100%
+        ),
+        radial-gradient(
+            circle at center,
+            var(--color1) 0%,
+            var(--color2) 100%
         );
+        /* linear-gradient(
+            -25deg,
+            var(--color1),
+            var(--color2)
+        ); */
     border-radius: 50%;
     width: 20vmin;
     height: 20vmin;
-    animation: bouncing 4s ease infinite;
+    animation: bouncing var(--anim-dur) ease-out infinite;
 }
 
 @keyframes bouncing {
@@ -43,7 +54,6 @@ body {
     50% {
         top: 50vmin;
     }
-
     100% {
         top: 25vmin;
     }
@@ -51,10 +61,28 @@ body {
 
 .ball-shadow {
     position: relative;
+    border-radius: 50%;
     margin: 0 auto;
-    top: 70vmin;
-    width: 40vmin;
-    height: 10vmin;
+    top: 71vmin;
+    width: 20.0vmin;
+    height: 2.0vmin;
+    background-color: hsla(0, 0%, 0%, 0.185);
     box-shadow: 
-        0vmin 0vmin 1vmin 1vmin hsla(0, 0%, 0%, 0.685);
+        0vmin 0vmin 1vmin hsla(0, 0%, 0%, 0.185),
+        0vmin 0vmin 2vmin hsla(0, 0%, 0%, 0.185),
+        0vmin 0vmin 4vmin hsla(0, 0%, 0%, 0.185),
+        0vmin 0vmin 16vmin hsla(0, 0%, 0%, 0.185);
+    animation: shadow var(--anim-dur) ease-out infinite
+}
+
+@keyframes shadow {
+    0% {
+        width: 2.0vmin;
+    }
+    50% {
+        width: 20.0vmin;
+    }
+    100% {
+        width: 2.0vmin;
+    }
 }
