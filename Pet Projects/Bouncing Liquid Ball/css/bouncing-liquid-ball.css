@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --sky-blue: hsl(197, 100%, 50%);
+    --sweet-green: hsl(103, 100%, 49%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border: 5px solid black;
+}
+
+.ball {
+    position: relative;
+    top: 25vmin;
+    margin: 0vmin auto;
+    background:
+        linear-gradient(
+            -25deg,
+            var(--sky-blue),
+            var(--sweet-green)
+        );
+    border-radius: 50%;
+    width: 20vmin;
+    height: 20vmin;
+    animation: bouncing 4s ease infinite;
+}
+
+@keyframes bouncing {
+    0% {
+        top: 25vmin;
+
+    }
+    50% {
+        top: 50vmin;
+    }
+
+    100% {
+        top: 25vmin;
+    }
+}
+
+.ball-shadow {
+    position: relative;
+    margin: 0 auto;
+    top: 70vmin;
+    width: 40vmin;
+    height: 10vmin;
+    box-shadow: 
+        0vmin 0vmin 1vmin 1vmin hsla(0, 0%, 0%, 0.685);
+}
