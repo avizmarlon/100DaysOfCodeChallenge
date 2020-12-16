@@ -58,14 +58,6 @@ body {
         width: calc(20vmin * 0.5);
         height: calc(20vmin * 1.2);
     }
-    80% {
-        width: calc(20vmin * 1.2);
-        height: calc(20vmin * 0.8);
-    }
-    90% {
-        width: calc(20vmin * 0.8);
-        height: calc(20vmin * 1.1);
-    }
     100% {
         top: 25vmin;
     }
@@ -76,7 +68,7 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     top: 71vmin;
-    width: 10.0vmin;
+    width: 12.0vmin;
     height: 2.0vmin;
     background-color: hsla(0, 0%, 0%, 0.10);
     box-shadow: 
@@ -89,26 +81,19 @@ body {
 
 @keyframes shadow {
     0% {
-        width: 10.0vmin;
+        width: 12vmin;
+        height: 2.0vmin;
     }
     40% {
         width: calc(20.0vmin * 1.3);
         height: calc(2.0vmin * 0.7);
     }
     75% {
-        width: calc(10.0vmin * 0.7);
+        width: calc(12.0vmin * 0.5);
         height: calc(2.0vmin * 1.2);
     }
-    80% {
-        width: calc(10.0vmin * 1.1);
-        height: calc(2.0vmin * 0.8);
-    }
-    90% {
-        width: calc(10.0vmin * 0.8);
-        height: calc(2.0vmin * 1.05);
-    }
     100% {
-        width: 10.0vmin;
+        width: 12.0vmin;
         height: 2.0vmin;
     }
 }
