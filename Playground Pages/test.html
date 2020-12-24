@@ -1,118 +1,37 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<style>
-		.navbar-container {
-			background: purple;
-			border: 3.5px solid black;
-			/*position: absolute;
-			left: 50%;
-			top: 50%;
-		 	transform: translate(-50%,-50%);
-			margin: 0 auto;*/
-			width: 700px;
-			height: 700px;
-			/*margin: 0 auto;*/
-			margin-bottom: 40px;
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .ball {
+            background-color: royalblue;
+            width: 50px;
+            height: 50px;
+			margin: 10px;
+			border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation: to-the-right 4s cubic-bezier(0.85, 0, 0.15, 1) infinite
+        }
 
-		}
+        @keyframes to-the-right {
+            0% {
+                left: 0px;
+            }
 
-		.navbar-row {
-			border: 3.5px solid black;
-			position: relative;
-			margin-bottom: 20px;
-		}
-		.navbar-item {
-			display: inline-block;
-			margin: 5px;
-			border: 3.5px solid black;
-			position: relative;
-		}
-		.navbar-anchor {
-			text-decoration: none;
-			position: relative;
-		}
-		.navbar-item-text {
-			color: white;
-			position: relative;
-			top: 50%;
-			border: 3.5px solid black;
-			font-size: initial;
-			vertical-align: middle;
-			
-		}
-
-		.super-height {
-			height: 200vw;
-		}
-
-		.sticky {
-			position: sticky;
-			top: 0;
-			left: 0;
-		}
-	</style>
+            100% {
+                left: 200px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-	<div class="navbar-container">
-		<div class="navbar-row sticky">
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Home</p>
-				</div>
-			</a>
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Categories</p>
-				</div>
-			</a>
-		</div>
-
-
-		<div class="navbar-row">
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Home</p>
-				</div>
-			</a>
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Categories</p>
-				</div>
-			</a>
-		</div>
-	</div>
-
-
-
-
-	<div class="navbar-container super-height">
-		<div class="navbar-row sticky">
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Home</p>
-				</div>
-			</a>
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Categories</p>
-				</div>
-			</a>
-		</div>
-
-
-		<div class="navbar-row">
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Home</p>
-				</div>
-			</a>
-			<a class="navbar-anchor" href="">
-				<div class="navbar-item">
-					<p class="navbar-item-text">Categories</p>
-				</div>
-			</a>
-		</div>
-	</div>
+    <div class="ball"></div>
 </body>
-</html>
