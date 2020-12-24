@@ -28,6 +28,8 @@ You can look at the horizontal axis (x; time) in percentages -- 0.5 = 50%; 1 = 1
 
 The vertical axis refers to how much of the animation effect should happen. For instance: In an animation which consists of moving an object from `left: 0px` to `left: 200px`, the y value of 1 represents the `left: 200px`, while 0.5 would represent `left: 100px`.
 
+### Example
+
 Now, let's say the duration of the animation above is 4 seconds long. The element will go from `left: 0px` to `left: 200px` in 4 seconds. However, say we want it to start very slow, speed up in the middle and then end very slowly. This is similar to the ease-in-out predefined values, but we want to accentuate the speed differences.
 
 To be more specific, I want the element to move around 100px (very fast) between the 2s and 3s marks.
@@ -82,7 +84,7 @@ It's somewhat close to what we I want. It doesn't have to be pixel perfect, but 
 
 Here is the visual representation of the above bezier curve:
 
-![bezier-curve-demo2.png](bezier-curve-demo2.png)
+![bezier-curve-demo2.png](bezier-curve-demo2.png)  
 *Courtesy of cubic-bezier.com*
 
 By the way, this website (cubic-bezier) is amazing to visualize `cubic-bezier()` values. It makes learning this whole concept much easier.
